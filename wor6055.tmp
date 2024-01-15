@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dexgyeo0pdcg8"]
+
+[ext_resource type="Texture2D" uid="uid://g6icn3q18uvp" path="res://test.png" id="1_krqec"]
+[ext_resource type="Texture2D" uid="uid://c4yxpivbayji3" path="res://character spite/вперед1фрейм.png" id="2_oc6de"]
+[ext_resource type="Script" path="res://Player.gd" id="2_qtkpt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8wtn"]
+size = Vector2(320, 180)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4e68m"]
+radius = 16.0
+height = 44.0
+
+[node name="World" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Test" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(389, 298)
+texture = ExtResource("1_krqec")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Test"]
+position = Vector2(-229, -211)
+shape = SubResource("RectangleShape2D_g8wtn")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("2_qtkpt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(69, 60)
+texture = ExtResource("2_oc6de")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Sprite2D"]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_4e68m")

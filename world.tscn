@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://dexgyeo0pdcg8"]
+
+[ext_resource type="Texture2D" uid="uid://d4gw2dlljwvqv" path="res://Landscape/lug.png" id="1_bf8qh"]
+[ext_resource type="PackedScene" uid="uid://eoq44uwtlaa8" path="res://player.tscn" id="2_78yo6"]
+
+[node name="World" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Test" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(960.375, 540.219)
+scale = Vector2(1.4015, 1.40308)
+texture = ExtResource("1_bf8qh")
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(177.264, 509.884)
+rotation = -2.28152
+scale = Vector2(0.0487547, 0.0402599)
+skew = -0.0114661
+polygon = PackedVector2Array(-4227.59, -10517.6, -4450.4, -9494.27, -2280.19, -7209.32, 320.246, -4206.57, 826.332, -5097.12)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(223, 1080)
+rotation = 0.914251
+scale = Vector2(0.220598, 0.200381)
+skew = -1.22786e-05
+polygon = PackedVector2Array(4230.28, -7228.98, -1138.28, 489.733, -658.365, 965.503, 4702.48, -6677.19)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-0.970311, 1.13705)
+rotation = -2.16771
+scale = Vector2(0.997816, 0.997713)
+polygon = PackedVector2Array(-550.917, -392.664, -1686.93, 1193.47, -1082.25, 1587.5, -5.17295, 2.5073)
+
+[node name="Player" parent="." instance=ExtResource("2_78yo6")]
+position = Vector2(186, 350)
