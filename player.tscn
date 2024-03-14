@@ -87,7 +87,7 @@ radius = 29.0
 height = 88.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e5s5k"]
-radius = 52.0096
+radius = 51.0392
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_txsbg")
@@ -101,7 +101,6 @@ animation = &"idle"
 speed_scale = 0.9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(200, 491)
 shape = SubResource("CapsuleShape2D_4e68m")
 
@@ -115,5 +114,5 @@ limit_smoothed = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
 visible = false
-position = Vector2(199, 490)
+position = Vector2(199, 485)
 shape = SubResource("CircleShape2D_e5s5k")

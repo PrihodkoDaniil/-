@@ -35,7 +35,7 @@ polygon = PackedVector2Array(68, 298, 62, 757, 1197, 754, 1197, 716, 1928, 716, 
 
 [node name="Forest" type="Sprite2D" parent="Location"]
 texture_filter = 5
-position = Vector2(3200, 451)
+position = Vector2(3201, 451)
 texture = ExtResource("2_7unnl")
 
 [node name="land" type="Sprite2D" parent="Location/Forest"]
@@ -76,7 +76,7 @@ polygon = PackedVector2Array(-613, 249, -385, 463, -257, 772, -104, 991, 149, 15
 [node name="Forest COl3" type="CollisionPolygon2D" parent="Location"]
 visible = false
 position = Vector2(3200, 451)
-polygon = PackedVector2Array(-810, -281, -354, -521, 113, -641, 437, -473, 958, -401, 1779, -251, 2073, -263, 2582, -239, 3062, -203, 3313, -299, 3421, -341, 3673, -653, 3547, -1198, -612, -1258, -1002, -1019)
+polygon = PackedVector2Array(-810, -281, -354, -521, 113, -641, 301, -572, 444, -369, 956, -338, 1311.03, -312.742, 1774, -197, 2073, -263, 2582, -239, 3062, -203, 3327, -200, 3617, -204, 3673, -653, 3547, -1198, -612, -1258, -1002, -1019)
 
 [node name="Forest COl5" type="CollisionPolygon2D" parent="Location"]
 visible = false
@@ -86,9 +86,10 @@ polygon = PackedVector2Array(-1289, -118, -983, -162, -814, -279, -714, -425, -5
 [node name="Forest COl6" type="CollisionPolygon2D" parent="Location"]
 visible = false
 position = Vector2(3206, 461)
-polygon = PackedVector2Array(882, 2248, 891, 2431, 966, 2584, 927, 2850, 885, 3060, 759, 3186, 434, 3367, 552, 3640, 786, 3688, 1085, 3631, 1368, 3599, 1504, 3633, 1675, 3752, 1875, 3748, 1946, 3572, 2018, 3410, 2103, 3191, 2103, 2996, 2041, 2720, 1927, 2549, 1827, 2392, 1708, 2435, 1708, 2468, 1708, 2558, 1628, 2625, 1471, 2620, 1361, 2539, 1304, 2439, 1211, 2304)
+polygon = PackedVector2Array(882, 2248, 891, 2431, 966, 2584, 927, 2850, 885, 3060, 759, 3186, 434, 3367, 562, 3651, 785, 3656, 1085, 3631, 1368, 3599, 1596, 3623, 1515, 3634, 1548, 3675, 1621, 3674, 1648, 3755, 1875, 3748, 1946, 3572, 2018, 3410, 2103, 3191, 2103, 2996, 2041, 2720, 1927, 2549, 1827, 2392, 1708, 2435, 1708, 2468, 1708, 2558, 1628, 2625, 1471, 2620, 1361, 2539, 1304, 2439, 1211, 2304)
 
 [node name="Forest COl4" type="CollisionPolygon2D" parent="Location"]
+visible = false
 position = Vector2(3200, 451)
 polygon = PackedVector2Array(3032, 1969, 2480, 2001, 1990, 2220, 2159, 2509, 2244, 2835, 2551, 2986, 2985, 2971, 3228, 2957, 3496, 2965, 3570, 2773, 3572, 2537, 3556, 2259, 3476, 2093, 3272, 1997)
 
@@ -103,6 +104,7 @@ position = Vector2(1199, -3552)
 polygon = PackedVector2Array(5823, 179, 8418, 172, 8388, 3778, 8214, 3778, 7430, 905, 6858, 913, 6080, 3799, 5835, 3799)
 
 [node name="Dryid house" type="CollisionPolygon2D" parent="Location"]
+visible = false
 position = Vector2(-32.8999, 170.6)
 polygon = PackedVector2Array(5809.9, 3354.4, 6289, 3350, 6277, 3802, 5835, 3799)
 
@@ -156,7 +158,7 @@ position = Vector2(1065, 437)
 shape = SubResource("CapsuleShape2D_w4ejp")
 
 [node name="Player" parent="." instance=ExtResource("2_78yo6")]
-position = Vector2(306, 15)
+position = Vector2(3090, -503)
 
 [node name="Tree 2" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -820,7 +822,7 @@ texture = ExtResource("3_0e1sy")
 
 [node name="Tree 2" type="Sprite2D" parent="Tree 2/Tree 4/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 3/Tree 2/Tree 2/Tree 2"]
 texture_filter = 1
-position = Vector2(58.5465, 15.6849)
+position = Vector2(57.6173, 9.1503)
 scale = Vector2(0.95575, 1.00577)
 texture = ExtResource("3_0e1sy")
 
@@ -880,7 +882,7 @@ texture = ExtResource("3_0e1sy")
 
 [node name="Tree 2" type="Sprite2D" parent="Tree 2/Tree 4/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2"]
 texture_filter = 1
-position = Vector2(46.257, -1.52091)
+position = Vector2(45.6153, 0.304848)
 scale = Vector2(1.10644, 1.00401)
 texture = ExtResource("3_0e1sy")
 
@@ -1014,6 +1016,72 @@ texture = ExtResource("3_0e1sy")
 texture_filter = 1
 position = Vector2(39.9615, 23.0501)
 scale = Vector2(0.926364, 0.853285)
+texture = ExtResource("3_0e1sy")
+
+[node name="Tree 3" type="Sprite2D" parent="Tree 2/Tree 4/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 3/Tree 3"]
+texture_filter = 1
+position = Vector2(-173.2, 2.80665)
+scale = Vector2(0.926364, 0.853285)
+texture = ExtResource("3_0e1sy")
+
+[node name="Tree 3" type="Sprite2D" parent="Tree 2/Tree 4/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 3/Tree 3/Tree 3"]
+texture_filter = 1
+position = Vector2(56.3702, 2.87801)
+scale = Vector2(0.926364, 0.853285)
+texture = ExtResource("3_0e1sy")
+
+[node name="Tree 3" type="Sprite2D" parent="Tree 2/Tree 4/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 3/Tree 3/Tree 3/Tree 3"]
+texture_filter = 1
+position = Vector2(70.2999, 12.0459)
+scale = Vector2(0.926364, 0.853285)
+texture = ExtResource("3_0e1sy")
+
+[node name="Tree 3" type="Sprite2D" parent="Tree 2/Tree 4/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 3/Tree 3/Tree 3/Tree 3/Tree 3"]
+texture_filter = 1
+position = Vector2(-720.521, -21.4594)
+scale = Vector2(1.67659, 1.70006)
+texture = ExtResource("3_0e1sy")
+
+[node name="Tree 3" type="Sprite2D" parent="Tree 2/Tree 4/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2"]
+texture_filter = 1
+position = Vector2(-22.8577, 19.9328)
+scale = Vector2(1.00219, 1.0661)
+texture = ExtResource("3_0e1sy")
+
+[node name="Tree 3" type="Sprite2D" parent="Tree 2/Tree 4/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 3"]
+texture_filter = 1
+position = Vector2(50.8478, 15.2579)
+scale = Vector2(0.926364, 0.853285)
+texture = ExtResource("3_0e1sy")
+
+[node name="Tree 3" type="Sprite2D" parent="Tree 2/Tree 4/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 3/Tree 3"]
+texture_filter = 1
+position = Vector2(61.9533, 6.84605)
+scale = Vector2(0.926364, 1.09029)
+texture = ExtResource("3_0e1sy")
+
+[node name="Tree 3" type="Sprite2D" parent="Tree 2/Tree 4/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 3/Tree 3/Tree 3"]
+texture_filter = 1
+position = Vector2(53.5513, 21.4696)
+scale = Vector2(1.10472, 1.20589)
+texture = ExtResource("3_0e1sy")
+
+[node name="Tree 3" type="Sprite2D" parent="Tree 2/Tree 4/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 3/Tree 3/Tree 3/Tree 3"]
+texture_filter = 1
+position = Vector2(192.646, -4.78637)
+scale = Vector2(0.926364, 1.09029)
+texture = ExtResource("3_0e1sy")
+
+[node name="Tree 4" type="Sprite2D" parent="Tree 2/Tree 4/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 3/Tree 3/Tree 3/Tree 3"]
+texture_filter = 1
+position = Vector2(-147.882, -41.2355)
+scale = Vector2(1.10472, 1.20589)
+texture = ExtResource("3_0e1sy")
+
+[node name="Tree 3" type="Sprite2D" parent="Tree 2/Tree 4/Tree 3/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 3/Tree 3/Tree 3/Tree 3/Tree 4"]
+texture_filter = 1
+position = Vector2(61.3383, 16.7322)
+scale = Vector2(0.875634, 0.718635)
 texture = ExtResource("3_0e1sy")
 
 [node name="Front" type="Sprite2D" parent="."]
@@ -3119,7 +3187,7 @@ texture = ExtResource("3_0e1sy")
 
 [node name="Tree 2" type="Sprite2D" parent="Front/Tree 6/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2"]
 texture_filter = 1
-position = Vector2(32.5103, 5.6223)
+position = Vector2(32.5111, 1.56061)
 texture = ExtResource("3_0e1sy")
 
 [node name="Tree 2" type="Sprite2D" parent="Front/Tree 6/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2/Tree 2"]
