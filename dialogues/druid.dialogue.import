@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://njij2plxigka"
+path="res://.godot/imported/druid.dialogue-c525fc809d08393a8db7ccf76160c5cf.tres"
+
+[deps]
+
+source_file="res://dialogues/druid.dialogue"
+dest_files=["res://.godot/imported/druid.dialogue-c525fc809d08393a8db7ccf76160c5cf.tres"]
+
+[params]
+
+defaults=true

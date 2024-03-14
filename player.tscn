@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://c35mrgp0eh1pc" path="res://character spite/вправо5фрейм.png" id="12_80orc"]
 [ext_resource type="Texture2D" uid="uid://yg3vr8tptwsw" path="res://character spite/назад2фрейм.png" id="13_x884j"]
 [ext_resource type="Texture2D" uid="uid://luneqjfvx5kq" path="res://character spite/назад3фрейм.png" id="14_gl660"]
-[ext_resource type="Texture2D" uid="uid://cua8x8ggfvjdh" path="res://character spite/character test.png" id="18_dps40"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ydxxi"]
 animations = [{
@@ -84,26 +83,37 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4e68m"]
-radius = 55.0
-height = 180.0
+radius = 29.0
+height = 88.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e5s5k"]
+radius = 52.0096
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_txsbg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(163.313, 444.688)
-scale = Vector2(3.76689, 3.60372)
+texture_filter = 1
+position = Vector2(200, 485)
+scale = Vector2(1.81082, 1.71203)
 sprite_frames = SubResource("SpriteFrames_ydxxi")
 animation = &"idle"
 speed_scale = 0.9
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(163.313, 444.688)
-scale = Vector2(3.76689, 3.60372)
-texture = ExtResource("18_dps40")
-hframes = 12
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(162, 444)
+visible = false
+position = Vector2(200, 491)
 shape = SubResource("CapsuleShape2D_4e68m")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(199, 498)
+limit_smoothed = true
+
+[node name="Direction" type="Marker2D" parent="."]
+
+[node name="ActionableFinder" type="Area2D" parent="Direction"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
+visible = false
+position = Vector2(199, 490)
+shape = SubResource("CircleShape2D_e5s5k")
