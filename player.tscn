@@ -101,6 +101,7 @@ animation = &"idle"
 speed_scale = 0.9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(200, 491)
 shape = SubResource("CapsuleShape2D_4e68m")
 
@@ -111,6 +112,7 @@ limit_smoothed = true
 [node name="Direction" type="Marker2D" parent="."]
 
 [node name="ActionableFinder" type="Area2D" parent="Direction"]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
 visible = false

@@ -148,17 +148,15 @@ scale = Vector2(1.58108, 1.5625)
 texture = ExtResource("4_ioiyt")
 
 [node name="Actionable" type="Area2D" parent="NPC"]
-visible = false
 script = ExtResource("5_dt410")
 dialogue_resource = ExtResource("6_8bobb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/Actionable"]
-visible = false
-position = Vector2(1065, 437)
+position = Vector2(5829, 4013)
 shape = SubResource("CapsuleShape2D_w4ejp")
 
 [node name="Player" parent="." instance=ExtResource("2_78yo6")]
-position = Vector2(3090, -503)
+position = Vector2(352, 23)
 
 [node name="Tree 2" type="Sprite2D" parent="."]
 texture_filter = 1
