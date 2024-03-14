@@ -89,7 +89,6 @@ position = Vector2(3206, 461)
 polygon = PackedVector2Array(882, 2248, 891, 2431, 966, 2584, 927, 2850, 885, 3060, 759, 3186, 434, 3367, 552, 3640, 786, 3688, 1085, 3631, 1368, 3599, 1504, 3633, 1675, 3752, 1875, 3748, 1946, 3572, 2018, 3410, 2103, 3191, 2103, 2996, 2041, 2720, 1927, 2549, 1827, 2392, 1708, 2435, 1708, 2468, 1708, 2558, 1628, 2625, 1471, 2620, 1361, 2539, 1304, 2439, 1211, 2304)
 
 [node name="Forest COl4" type="CollisionPolygon2D" parent="Location"]
-visible = false
 position = Vector2(3200, 451)
 polygon = PackedVector2Array(3032, 1969, 2480, 2001, 1990, 2220, 2159, 2509, 2244, 2835, 2551, 2986, 2985, 2971, 3228, 2957, 3496, 2965, 3570, 2773, 3572, 2537, 3556, 2259, 3476, 2093, 3272, 1997)
 
@@ -104,9 +103,8 @@ position = Vector2(1199, -3552)
 polygon = PackedVector2Array(5823, 179, 8418, 172, 8388, 3778, 8214, 3778, 7430, 905, 6858, 913, 6080, 3799, 5835, 3799)
 
 [node name="Dryid house" type="CollisionPolygon2D" parent="Location"]
-visible = false
-position = Vector2(-16, 322)
-polygon = PackedVector2Array(5792, 3355, 6289, 3350, 6277, 3802, 5835, 3799)
+position = Vector2(-32.8999, 170.6)
+polygon = PackedVector2Array(5809.9, 3354.4, 6289, 3350, 6277, 3802, 5835, 3799)
 
 [node name="Village forest" type="CollisionPolygon2D" parent="Location"]
 visible = false
@@ -132,18 +130,18 @@ texture = ExtResource("5_5ub8e")
 
 [node name="House4" type="Sprite2D" parent="."]
 texture_filter = 5
-position = Vector2(6032, 3886)
+position = Vector2(6015.1, 3734.6)
 scale = Vector2(2.84048, 3.12774)
 texture = ExtResource("4_03t3r")
 
 [node name="NPC" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC"]
-position = Vector2(5860, 4126)
+position = Vector2(5830, 4013)
 shape = SubResource("CapsuleShape2D_skdfn")
 
 [node name="DummyFront" type="Sprite2D" parent="NPC"]
-position = Vector2(5858, 4122)
+position = Vector2(5830, 4009)
 scale = Vector2(1.58108, 1.5625)
 texture = ExtResource("4_ioiyt")
 
