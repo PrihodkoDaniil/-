@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dexgyeo0pdcg8"]
+[gd_scene load_steps=16 format=3 uid="uid://dexgyeo0pdcg8"]
 
 [ext_resource type="Texture2D" uid="uid://d4gw2dlljwvqv" path="res://Landscape/lug.png" id="1_bf8qh"]
 [ext_resource type="Texture2D" uid="uid://dptb2ksk7g7eq" path="res://Landscape/Forest.png" id="2_7unnl"]
@@ -10,7 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://30j4w0jdvhrf" path="res://other/House3.png" id="5_5ub8e"]
 [ext_resource type="Script" path="res://other/Actionable.gd" id="5_dt410"]
 [ext_resource type="Resource" uid="uid://njij2plxigka" path="res://dialogues/druid.dialogue" id="6_8bobb"]
-[ext_resource type="PackedScene" uid="uid://h12mc4mgh74p" path="res://inventory/inventory.tscn" id="11_ejwdm"]
+[ext_resource type="Script" path="res://inventory/scripts/inventory.gd" id="11_le77j"]
+[ext_resource type="Texture2D" uid="uid://dsh8wbkvs54tv" path="res://sprites/inventory sprites/InventoryPanel.png" id="12_pvkns"]
+[ext_resource type="Script" path="res://inventory/scripts/inventory_ui.gd" id="12_q8duc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_skdfn"]
 radius = 35.0
@@ -3618,4 +3620,75 @@ position = Vector2(-65.6458, 6.7622)
 scale = Vector2(1.09232, 1.02775)
 texture = ExtResource("3_0e1sy")
 
-[node name="Inventory" parent="." instance=ExtResource("11_ejwdm")]
+[node name="Inventory" type="Node2D" parent="." node_paths=PackedStringArray("inventory_ui")]
+script = ExtResource("11_le77j")
+inventory_ui = NodePath("CanvasLayer/Control/InventoryPanel/ScrollContainer")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Inventory"]
+
+[node name="Control" type="Control" parent="Inventory/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InventoryPanel" type="Sprite2D" parent="Inventory/CanvasLayer/Control"]
+position = Vector2(211.25, 77)
+scale = Vector2(1.26, 0.99)
+texture = ExtResource("12_pvkns")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Inventory/CanvasLayer/Control/InventoryPanel"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("12_q8duc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Inventory/CanvasLayer/Control/InventoryPanel/ScrollContainer"]
+layout_mode = 2
+
+[node name="Control1" type="Control" parent="Inventory/CanvasLayer/Control/InventoryPanel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="Inventory/CanvasLayer/Control/InventoryPanel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="Inventory/CanvasLayer/Control/InventoryPanel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control4" type="Control" parent="Inventory/CanvasLayer/Control/InventoryPanel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="InventoryMoreInfoPanel" type="Sprite2D" parent="Inventory/CanvasLayer/Control"]
+
+[node name="ItemNameLabel" type="RichTextLabel" parent="Inventory/CanvasLayer/Control/InventoryMoreInfoPanel"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ItemDescLabel" type="RichTextLabel" parent="Inventory/CanvasLayer/Control/InventoryMoreInfoPanel"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UseLable" type="Label" parent="Inventory/CanvasLayer/Control/InventoryMoreInfoPanel"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="DropLabel" type="Label" parent="Inventory/CanvasLayer/Control/InventoryMoreInfoPanel"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="InventoryStatsPanel" type="Sprite2D" parent="Inventory/CanvasLayer/Control"]
+
+[node name="NameLabel" type="Label" parent="Inventory/CanvasLayer/Control/InventoryStatsPanel"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="LvLable" type="Label" parent="Inventory/CanvasLayer/Control/InventoryStatsPanel"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="HPLabel" type="Label" parent="Inventory/CanvasLayer/Control/InventoryStatsPanel"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="GoldLabel" type="Label" parent="Inventory/CanvasLayer/Control/InventoryStatsPanel"]
+offset_right = 40.0
+offset_bottom = 23.0

@@ -1,19 +1,19 @@
 [gd_scene load_steps=18 format=3 uid="uid://eoq44uwtlaa8"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_txsbg"]
-[ext_resource type="Texture2D" uid="uid://c4yxpivbayji3" path="res://character spite/вперед1фрейм.png" id="2_ne50d"]
-[ext_resource type="Texture2D" uid="uid://dmw24jdvkfgue" path="res://character spite/вперед2фрейм.png" id="3_v2cud"]
-[ext_resource type="Texture2D" uid="uid://dmb3pj3vui7yr" path="res://character spite/вперед3фрейм.png" id="4_xhrvm"]
-[ext_resource type="Texture2D" uid="uid://dat7oq3btgf06" path="res://character spite/влево2фрейм.png" id="5_33j6i"]
-[ext_resource type="Texture2D" uid="uid://04bcfgslc6ep" path="res://character spite/влево3фрейм.png" id="6_ngsyi"]
-[ext_resource type="Texture2D" uid="uid://d0kc1fuorfkah" path="res://character spite/влево4фрейм.png" id="7_2ielt"]
-[ext_resource type="Texture2D" uid="uid://bf447ikhrhbo0" path="res://character spite/влево5фрейм.png" id="8_3mupi"]
-[ext_resource type="Texture2D" uid="uid://dvijgbdnvnxpn" path="res://character spite/вправо2фрейм.png" id="9_7au8i"]
-[ext_resource type="Texture2D" uid="uid://by5myt1fv2ogt" path="res://character spite/вправо3фрейм.png" id="10_pqhff"]
-[ext_resource type="Texture2D" uid="uid://cf55te65tk3ph" path="res://character spite/вправо4фрейм.png" id="11_fef0l"]
-[ext_resource type="Texture2D" uid="uid://c35mrgp0eh1pc" path="res://character spite/вправо5фрейм.png" id="12_80orc"]
-[ext_resource type="Texture2D" uid="uid://yg3vr8tptwsw" path="res://character spite/назад2фрейм.png" id="13_x884j"]
-[ext_resource type="Texture2D" uid="uid://luneqjfvx5kq" path="res://character spite/назад3фрейм.png" id="14_gl660"]
+[ext_resource type="Texture2D" uid="uid://c4yxpivbayji3" path="res://sprites/character sprites/вперед1фрейм.png" id="2_ne50d"]
+[ext_resource type="Texture2D" uid="uid://dmw24jdvkfgue" path="res://sprites/character sprites/вперед2фрейм.png" id="3_v2cud"]
+[ext_resource type="Texture2D" uid="uid://dmb3pj3vui7yr" path="res://sprites/character sprites/вперед3фрейм.png" id="4_xhrvm"]
+[ext_resource type="Texture2D" uid="uid://dat7oq3btgf06" path="res://sprites/character sprites/влево2фрейм.png" id="5_33j6i"]
+[ext_resource type="Texture2D" uid="uid://04bcfgslc6ep" path="res://sprites/character sprites/влево3фрейм.png" id="6_ngsyi"]
+[ext_resource type="Texture2D" uid="uid://d0kc1fuorfkah" path="res://sprites/character sprites/влево4фрейм.png" id="7_2ielt"]
+[ext_resource type="Texture2D" uid="uid://bf447ikhrhbo0" path="res://sprites/character sprites/влево5фрейм.png" id="8_3mupi"]
+[ext_resource type="Texture2D" uid="uid://dvijgbdnvnxpn" path="res://sprites/character sprites/вправо2фрейм.png" id="9_7au8i"]
+[ext_resource type="Texture2D" uid="uid://by5myt1fv2ogt" path="res://sprites/character sprites/вправо3фрейм.png" id="10_pqhff"]
+[ext_resource type="Texture2D" uid="uid://cf55te65tk3ph" path="res://sprites/character sprites/вправо4фрейм.png" id="11_fef0l"]
+[ext_resource type="Texture2D" uid="uid://c35mrgp0eh1pc" path="res://sprites/character sprites/вправо5фрейм.png" id="12_80orc"]
+[ext_resource type="Texture2D" uid="uid://yg3vr8tptwsw" path="res://sprites/character sprites/назад2фрейм.png" id="13_x884j"]
+[ext_resource type="Texture2D" uid="uid://luneqjfvx5kq" path="res://sprites/character sprites/назад3фрейм.png" id="14_gl660"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ydxxi"]
 animations = [{
@@ -101,6 +101,7 @@ animation = &"idle"
 speed_scale = 0.9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(200, 491)
 shape = SubResource("CapsuleShape2D_4e68m")
 
@@ -111,6 +112,7 @@ limit_smoothed = true
 [node name="Direction" type="Marker2D" parent="."]
 
 [node name="ActionableFinder" type="Area2D" parent="Direction"]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
 visible = false
