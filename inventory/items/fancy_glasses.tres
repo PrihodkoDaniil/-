@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="accessory_item" load_steps=2 format=3 uid="uid://vs4s0y7bkpcq"]
+
+[ext_resource type="Script" path="res://resources/accessory_item.gd" id="1_17vqo"]
+
+[resource]
+script = ExtResource("1_17vqo")
+strength_plus = 0
+physique_plus = 0
+intelligence_plus = 0
+charisma_plus = 2
+dexterity_plus = 0
+wisdom_plus = 0
+name = "Модные очки"
+description = "+ 2 харизмы"
+action = "set_accessory"
+quantity = 1

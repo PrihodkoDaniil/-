@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="StartStats" load_steps=2 format=3 uid="uid://dju2y2h8nwa"]
+
+[ext_resource type="Script" path="res://resources/player_stats.gd" id="1_jxvc8"]
+
+[resource]
+script = ExtResource("1_jxvc8")
+player_class = "Fighter"
+max_health = 18
+defence = 15
+strength = 15
+physique = 14
+intelligence = 10
+charisma = 8
+dexterity = 13
+wisdom = 12

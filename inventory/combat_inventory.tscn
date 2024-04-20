@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8ivoljpcls66"]
+
+[ext_resource type="Script" path="res://inventory/scripts/inventory_ui_item.gd" id="1_j4s87"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_j4s87")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+texture_repeat = 2
+layout_mode = 0
+offset_right = 77.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 10
+text = "[x1] Apple"
+vertical_alignment = 1
+autowrap_mode = 2

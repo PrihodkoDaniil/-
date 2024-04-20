@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="weapon_item" load_steps=2 format=3 uid="uid://pexuqj5psva"]
+
+[ext_resource type="Script" path="res://resources/weapon_item.gd" id="1_u8ghp"]
+
+[resource]
+script = ExtResource("1_u8ghp")
+atk_plus = 12
+name = "Секира"
+description = "1к12 урона"
+action = "set_weapon"
+quantity = 1

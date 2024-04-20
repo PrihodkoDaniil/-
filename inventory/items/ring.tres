@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="accessory_item" load_steps=2 format=3 uid="uid://dooate5dlnw0h"]
+
+[ext_resource type="Script" path="res://resources/accessory_item.gd" id="1_lql4y"]
+
+[resource]
+script = ExtResource("1_lql4y")
+strength_plus = 0
+physique_plus = 0
+intelligence_plus = 2
+charisma_plus = 0
+dexterity_plus = 0
+wisdom_plus = 0
+name = "Кольцо"
+description = "+ 2 интеллекта"
+action = "set_accessory"
+quantity = 1

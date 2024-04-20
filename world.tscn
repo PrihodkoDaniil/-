@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dexgyeo0pdcg8"]
+[gd_scene load_steps=21 format=3 uid="uid://dexgyeo0pdcg8"]
 
 [ext_resource type="Texture2D" uid="uid://d4gw2dlljwvqv" path="res://Landscape/lug.png" id="1_bf8qh"]
 [ext_resource type="Texture2D" uid="uid://dptb2ksk7g7eq" path="res://Landscape/Forest.png" id="2_7unnl"]
@@ -6,15 +6,38 @@
 [ext_resource type="Texture2D" uid="uid://dyv3oue2it5vf" path="res://Landscape/Trees/Tree 1.png" id="3_0e1sy"]
 [ext_resource type="Texture2D" uid="uid://i0sf62i6amxh" path="res://other/House1.png" id="3_7p6e1"]
 [ext_resource type="Texture2D" uid="uid://c4q6ujpgys3cc" path="res://other/House2.png" id="4_03t3r"]
-[ext_resource type="Texture2D" uid="uid://vk8qhfknaooa" path="res://sprites/character sprites/dummy_front.png" id="4_ioiyt"]
 [ext_resource type="Texture2D" uid="uid://30j4w0jdvhrf" path="res://other/House3.png" id="5_5ub8e"]
 [ext_resource type="Script" path="res://other/Actionable.gd" id="5_dt410"]
+[ext_resource type="Texture2D" uid="uid://cvfp1dp8gskjl" path="res://other/DryidHouse.png" id="6_2uhf5"]
 [ext_resource type="Resource" uid="uid://njij2plxigka" path="res://dialogues/druid.dialogue" id="6_8bobb"]
+[ext_resource type="Script" path="res://Dryid.gd" id="6_vtvjd"]
+[ext_resource type="Texture2D" uid="uid://b6ykx8m8kuno5" path="res://character spite/NPC/Dryid/друид2.png" id="7_ltmni"]
+[ext_resource type="Texture2D" uid="uid://6ab81ffafyni" path="res://character spite/NPC/Dryid/друидвдох.png" id="8_lirf7"]
+[ext_resource type="Texture2D" uid="uid://civgo1ctgwc7f" path="res://character spite/NPC/Dryid/друидвыдох.png" id="9_u4ybx"]
+[ext_resource type="Script" path="res://Dryidanim.gd" id="10_hm40t"]
 [ext_resource type="PackedScene" uid="uid://h12mc4mgh74p" path="res://inventory/inventory.tscn" id="11_ejwdm"]
+[ext_resource type="PackedScene" uid="uid://bh234t4c2xdk2" path="res://combat/combat_system.tscn" id="12_4wjr6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_skdfn"]
 radius = 35.0
 height = 86.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_exxh5"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("7_ltmni")
+}, {
+"duration": 3.0,
+"texture": ExtResource("8_lirf7")
+}, {
+"duration": 3.0,
+"texture": ExtResource("9_u4ybx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w4ejp"]
 radius = 61.0
@@ -135,29 +158,36 @@ texture = ExtResource("5_5ub8e")
 texture_filter = 5
 position = Vector2(6015.1, 3734.6)
 scale = Vector2(2.84048, 3.12774)
-texture = ExtResource("4_03t3r")
+texture = ExtResource("6_2uhf5")
 
-[node name="NPC" type="StaticBody2D" parent="."]
+[node name="Dryid" type="CharacterBody2D" parent="."]
+script = ExtResource("6_vtvjd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC"]
-position = Vector2(5830, 4013)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dryid"]
+visible = false
+position = Vector2(5830, 4006)
 shape = SubResource("CapsuleShape2D_skdfn")
 
-[node name="DummyFront" type="Sprite2D" parent="NPC"]
-position = Vector2(5830, 4009)
-scale = Vector2(1.58108, 1.5625)
-texture = ExtResource("4_ioiyt")
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Dryid"]
+texture_filter = 1
+position = Vector2(5830, 4004)
+scale = Vector2(1.60417, 1.66327)
+sprite_frames = SubResource("SpriteFrames_exxh5")
+animation = &"idle"
+frame_progress = 0.96815
+script = ExtResource("10_hm40t")
 
-[node name="Actionable" type="Area2D" parent="NPC"]
+[node name="Actionable" type="Area2D" parent="Dryid"]
+visible = false
 script = ExtResource("5_dt410")
 dialogue_resource = ExtResource("6_8bobb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/Actionable"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dryid/Actionable"]
 position = Vector2(5829, 4013)
 shape = SubResource("CapsuleShape2D_w4ejp")
 
 [node name="Player" parent="." instance=ExtResource("2_78yo6")]
-position = Vector2(352, 23)
+position = Vector2(5404, 3450)
 
 [node name="Tree 2" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -3619,3 +3649,7 @@ scale = Vector2(1.09232, 1.02775)
 texture = ExtResource("3_0e1sy")
 
 [node name="Inventory" parent="." instance=ExtResource("11_ejwdm")]
+visible = false
+
+[node name="CombatSystem" parent="." instance=ExtResource("12_4wjr6")]
+visible = false

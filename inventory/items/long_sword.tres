@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="weapon_item" load_steps=2 format=3 uid="uid://dd7ibyudhjaj8"]
+
+[ext_resource type="Script" path="res://resources/weapon_item.gd" id="1_w3ijf"]
+
+[resource]
+script = ExtResource("1_w3ijf")
+atk_plus = 8
+name = "Длинный меч"
+description = "1к8 урона"
+action = "set_weapon"
+quantity = 1

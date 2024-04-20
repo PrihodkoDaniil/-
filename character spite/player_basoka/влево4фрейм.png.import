@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g6icn3q18uvp"
-path="res://.godot/imported/test.png-2b0b935732229e5bd5e655f2644b2498.ctex"
+uid="uid://d0kc1fuorfkah"
+path="res://.godot/imported/влево4фрейм.png-6c4fc44c234212871be97a065e5c2203.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://test.png"
-dest_files=["res://.godot/imported/test.png-2b0b935732229e5bd5e655f2644b2498.ctex"]
+source_file="res://character spite/player_basoka/влево4фрейм.png"
+dest_files=["res://.godot/imported/влево4фрейм.png-6c4fc44c234212871be97a065e5c2203.ctex"]
 
 [params]
 

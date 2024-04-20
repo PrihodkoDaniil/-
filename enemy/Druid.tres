@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://b3ntcxmb0vfc5"]
+
+[ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_qvlp6"]
+[ext_resource type="Texture2D" uid="uid://b6ykx8m8kuno5" path="res://character spite/NPC/Dryid/друид2.png" id="2_03gys"]
+
+[resource]
+script = ExtResource("1_qvlp6")
+name = "Друид"
+health = 50
+texture = ExtResource("2_03gys")
+damage = 15

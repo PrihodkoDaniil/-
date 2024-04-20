@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="StartStats" load_steps=2 format=3 uid="uid://3p5np6lpa2kl"]
+
+[ext_resource type="Script" path="res://resources/player_stats.gd" id="1_kcsoh"]
+
+[resource]
+script = ExtResource("1_kcsoh")
+player_class = "Barbarian"
+max_health = 20
+defence = 13
+strength = 15
+physique = 14
+intelligence = 8
+charisma = 13
+dexterity = 12
+wisdom = 10

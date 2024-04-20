@@ -18,7 +18,6 @@ func _process(delta):
 		render_items()
 		render_selected()
 	if Input.is_action_just_pressed("ui_cancel") and canvas.visible and more_info_panel.visible:
-
 		more_info_panel.visible = false
 	elif Input.is_action_just_pressed("ui_cancel") and canvas.visible and not more_info_panel.visible:
 		canvas.visible = false

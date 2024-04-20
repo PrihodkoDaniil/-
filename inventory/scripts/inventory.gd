@@ -6,11 +6,11 @@ var inventory := [] # List to store inv items
 
 func _process(delta):
 	if Input.is_action_just_pressed("add_item"):
-		add_item(load('res://Inventory/Items/test_item1.tres'))
-		add_item(load('res://Inventory/Items/test_item2.tres'))
-		add_item(load('res://Inventory/Items/test_item3.tres'))
-		add_item(load('res://Inventory/Items/test_item4.tres'))
-		add_item(load('res://Inventory/Items/test_item5.tres'))
+		add_item(load('res://inventory/items/axe.tres'))
+		add_item(load('res://inventory/items/Cookie.tres'))
+		add_item(load('res://inventory/items/blue_flower.tres'))
+		add_item(load('res://inventory/items/fancy_glasses.tres'))
+		add_item(load('res://inventory/items/short_sword.tres'))
 		inventory_ui.render_items()
 
 #---Function adds a new item to the inventory---#

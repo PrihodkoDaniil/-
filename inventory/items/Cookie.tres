@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="food_item" load_steps=2 format=3 uid="uid://ddog5ijig6efo"]
+
+[ext_resource type="Script" path="res://resources/food_item.gd" id="1_t7s4w"]
+
+[resource]
+script = ExtResource("1_t7s4w")
+health_restored = 5
+name = "Печенька"
+description = "+ 5 хп"
+action = "heal_item"
+quantity = 1

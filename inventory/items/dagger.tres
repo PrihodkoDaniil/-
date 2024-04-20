@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="weapon_item" load_steps=2 format=3 uid="uid://uupinmhvykeu"]
+
+[ext_resource type="Script" path="res://resources/weapon_item.gd" id="1_5ymx0"]
+
+[resource]
+script = ExtResource("1_5ymx0")
+atk_plus = 4
+name = "Кинжал"
+description = "1к4 урона"
+action = "set_weapon"
+quantity = 1

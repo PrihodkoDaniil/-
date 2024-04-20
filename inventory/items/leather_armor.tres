@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="armor_item" load_steps=2 format=3 uid="uid://dh1mxyrwo1hcp"]
+
+[ext_resource type="Script" path="res://resources/armor_resource.gd" id="1_juq0j"]
+
+[resource]
+script = ExtResource("1_juq0j")
+defence_plus = 2
+name = "Легкая броня"
+description = "+ 2 защиты"
+action = "set_armor"
+quantity = 1

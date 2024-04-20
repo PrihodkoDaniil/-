@@ -1,13 +1,17 @@
 ~ start
 
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
+Друид: [[Здравствуй|Приветствую]], путник. Давно я никого не видел в этой глуши. Что тебя сюда привело?
+- Я не знаю как сюда попал. Где я?
+	Друид: Хм...Ты должно быть пересёк барьер, но сейчас это не важно. Ты находишься во Мшистом лесу. Если хочешь проверить свои карманы, то нажми [I], а если хочешь проверить свое состояние, нажми [Tab].
+	Друид: Вряд ли я еще смогу тебе чем-то помочь. Неподалеку отсюда есть деревня, сходи туда, может быть тебе там помогут или что-то подскажу.
 
+- Мне не нужна твоя помощь, старый пердуны
+	Друид: второе
+- Начать бой => battle
+- Уйти 
+	Друид: До встречи, путник. 
+	=> END
 => END
+
+~ battle
+do State.go_to_battle()
