@@ -20,9 +20,14 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+<<<<<<< HEAD
 State="*res://StatsUI/State.gd"
 CombatSystem="*res://combat/combat_system.tscn"
 SoundPlayer="*res://Scripts/sound_player.gd"
+=======
+State="*res://Scripts/State.gd"
+CombatSystem="*res://combat/combat_system.tscn"
+>>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1
 
 [display]
 

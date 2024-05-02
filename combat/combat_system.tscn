@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 [gd_scene load_steps=15 format=3 uid="uid://bh234t4c2xdk2"]
 
 [ext_resource type="Texture2D" uid="uid://dptb2ksk7g7eq" path="res://Landscape/Forest.png" id="1_o4mwx"]
 [ext_resource type="Script" path="res://combat/combat_system.gd" id="1_rxmcq"]
+=======
+[gd_scene load_steps=16 format=3 uid="uid://bh234t4c2xdk2"]
+
+[ext_resource type="Texture2D" uid="uid://dptb2ksk7g7eq" path="res://Landscape/Forest.png" id="1_o4mwx"]
+[ext_resource type="Script" path="res://combat/combat_system.gd" id="1_rxmcq"]
+[ext_resource type="Texture2D" uid="uid://b6ykx8m8kuno5" path="res://character spite/NPC/Dryid/друид2.png" id="3_xfgu0"]
+>>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mv8f"]
 bg_color = Color(0.807843, 0, 0.054902, 1)
@@ -170,6 +178,10 @@ vertical_alignment = 1
 texture_filter = 1
 custom_minimum_size = Vector2(250, 250)
 layout_mode = 2
+<<<<<<< HEAD
+=======
+texture = ExtResource("3_xfgu0")
+>>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1
 expand_mode = 1
 stretch_mode = 5
 

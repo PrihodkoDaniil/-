@@ -7,6 +7,10 @@ script = ExtResource("1_u8ghp")
 atk_plus = 12
 name = "Секира"
 description = "1к12 урона"
+<<<<<<< HEAD
 type = "Оружие"
 action = "set_axe"
+=======
+action = "set_weapon"
+>>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1
 quantity = 1

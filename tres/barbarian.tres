@@ -6,7 +6,11 @@
 script = ExtResource("1_kcsoh")
 player_class = "Barbarian"
 max_health = 20
+<<<<<<< HEAD
 defence = 14
+=======
+defence = 13
+>>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1
 strength = 15
 physique = 14
 intelligence = 8

@@ -10,9 +10,15 @@ func _process(delta):
 	if Input.is_action_just_pressed("add_item"):
 		add_item(load('res://inventory/items/axe.tres'))
 		add_item(load('res://inventory/items/Cookie.tres'))
+<<<<<<< HEAD
 		add_item(load('res://inventory/items/small_candy.tres'))
 		add_item(load('res://inventory/items/ring.tres'))
 		add_item(load('res://inventory/items/leather_armor.tres'))
+=======
+		add_item(load('res://inventory/items/blue_flower.tres'))
+		add_item(load('res://inventory/items/fancy_glasses.tres'))
+		add_item(load('res://inventory/items/short_sword.tres'))
+>>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1
 		inventory_ui.render_items()
 	
 func loot():

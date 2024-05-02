@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<<< HEAD:other/ящик.png.import
 uid="uid://dewqkcuwmne5h"
 path="res://.godot/imported/ящик.png-d31a70786af270376472bea08a0ab524.ctex"
+========
+uid="uid://cvfp1dp8gskjl"
+path="res://.godot/imported/DryidHouse.png-9dc930af0ef41b2b7d9877a267206079.ctex"
+>>>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1:other/DryidHouse.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:other/ящик.png.import
 source_file="res://other/ящик.png"
 dest_files=["res://.godot/imported/ящик.png-d31a70786af270376472bea08a0ab524.ctex"]
+========
+source_file="res://other/DryidHouse.png"
+dest_files=["res://.godot/imported/DryidHouse.png-9dc930af0ef41b2b7d9877a267206079.ctex"]
+>>>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1:other/DryidHouse.png.import
 
 [params]
 

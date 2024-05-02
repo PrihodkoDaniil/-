@@ -7,6 +7,10 @@ script = ExtResource("1_t7s4w")
 health_restored = 5
 name = "Печенька"
 description = "+ 5 хп"
+<<<<<<< HEAD
 type = "Еда"
 action = "heal_cookie"
+=======
+action = "heal_item"
+>>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1
 quantity = 1
