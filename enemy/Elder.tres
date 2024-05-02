@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://b6n6dp671f8i2"]
+
+[ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_wmt4q"]
+[ext_resource type="Texture2D" uid="uid://dd1h0yeekwb2o" path="res://character spite/NPC/Elder/бабка.png" id="2_efulj"]
+
+[resource]
+script = ExtResource("1_wmt4q")
+name = "Староста"
+health = 75
+texture = ExtResource("2_efulj")
+damage = 10

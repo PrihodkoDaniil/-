@@ -1,0 +1,373 @@
+[gd_scene load_steps=19 format=3 uid="uid://bh234t4c2xdk2"]
+
+[ext_resource type="Texture2D" uid="uid://dptb2ksk7g7eq" path="res://Landscape/Forest.png" id="1_o4mwx"]
+[ext_resource type="Script" path="res://combat/combat_system.gd" id="1_rxmcq"]
+[ext_resource type="Texture2D" uid="uid://b6ykx8m8kuno5" path="res://character spite/NPC/Dryid/друид2.png" id="3_xfgu0"]
+[ext_resource type="Script" path="res://combat/combat_item.gd" id="4_b6q2c"]
+[ext_resource type="PackedScene" uid="uid://d0uanackpc07n" path="res://inventory/combat_ui_item.tscn" id="4_eipqg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mv8f"]
+bg_color = Color(0.807843, 0, 0.054902, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1gn7t"]
+bg_color = Color(0, 0.709804, 0, 1)
+border_width_left = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2sb0m"]
+bg_color = Color(0, 0, 0, 0.392157)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlpoo"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fguww"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dipfv"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vhts5"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q4h0t"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_krgkh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemyContainer/Enemy:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_w7dai"]
+resource_name = "defence"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_cjf3d"]
+resource_name = "enemy_damage"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemyContainer/Enemy:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_y1qb0"]
+resource_name = "enemy_damage_you"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_os4ey"]
+_data = {
+"RESET": SubResource("Animation_krgkh"),
+"defence": SubResource("Animation_w7dai"),
+"enemy_damage": SubResource("Animation_cjf3d"),
+"enemy_damage_you": SubResource("Animation_y1qb0")
+}
+
+[node name="CombatSystem" type="Node2D"]
+script = ExtResource("1_rxmcq")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 1024.0
+texture = ExtResource("1_o4mwx")
+expand_mode = 1
+
+[node name="EnemyContainer" type="VBoxContainer" parent="."]
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 532.0
+offset_top = 386.0
+offset_right = 782.0
+offset_bottom = 667.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="EnemyContainer"]
+custom_minimum_size = Vector2(250, 25)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_2mv8f")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1gn7t")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="EnemyContainer/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "HP: 25/50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Enemy" type="TextureRect" parent="EnemyContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+texture = ExtResource("3_xfgu0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PlayerPanel" type="Panel" parent="."]
+custom_minimum_size = Vector2(1280, 100)
+offset_top = 874.0
+offset_right = 1280.0
+offset_bottom = 1024.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2sb0m")
+
+[node name="PlayerData" type="HBoxContainer" parent="PlayerPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 159.0
+offset_right = -119.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PlayerPanel/PlayerData"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "PLAYER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="PlayerPanel/PlayerData"]
+custom_minimum_size = Vector2(250, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme_override_styles/background = SubResource("StyleBoxFlat_2mv8f")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1gn7t")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="PlayerPanel/PlayerData/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "HP: 25/50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerActions" type="Panel" parent="."]
+custom_minimum_size = Vector2(1280, 100)
+offset_right = 1280.0
+offset_bottom = 150.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2sb0m")
+
+[node name="Actions" type="HBoxContainer" parent="PlayerActions"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Attack" type="Button" parent="PlayerActions/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_rlpoo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fguww")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dipfv")
+text = "ATTACK
+"
+
+[node name="Defence" type="Button" parent="PlayerActions/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_rlpoo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fguww")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dipfv")
+text = "DEFENCE"
+
+[node name="Items" type="Button" parent="PlayerActions/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_rlpoo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fguww")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dipfv")
+text = "ITEMS"
+
+[node name="Run" type="Button" parent="PlayerActions/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_rlpoo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fguww")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dipfv")
+text = "RUN"
+
+[node name="ActionText" type="Panel" parent="."]
+visible = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 40.0
+offset_top = 18.0
+offset_right = 1240.0
+offset_bottom = 268.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vhts5")
+
+[node name="Label" type="Label" parent="ActionText"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 29.0
+offset_top = 23.0
+offset_right = -30.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "ТЫ СТУКНУЛ!!!"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ItemsPanel" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(25, 25)
+offset_left = 45.0
+offset_top = 19.0
+offset_right = 1245.0
+offset_bottom = 269.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q4h0t")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ItemsPanel" node_paths=PackedStringArray("panel")]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 87.0
+offset_right = 1180.0
+offset_bottom = 156.0
+script = ExtResource("4_b6q2c")
+panel = NodePath("..")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ItemsPanel/ScrollContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 250
+
+[node name="Control" parent="ItemsPanel/ScrollContainer/HBoxContainer" instance=ExtResource("4_eipqg")]
+layout_mode = 2
+
+[node name="Control2" parent="ItemsPanel/ScrollContainer/HBoxContainer" instance=ExtResource("4_eipqg")]
+layout_mode = 2
+
+[node name="Control3" parent="ItemsPanel/ScrollContainer/HBoxContainer" instance=ExtResource("4_eipqg")]
+layout_mode = 2
+
+[node name="Control4" parent="ItemsPanel/ScrollContainer/HBoxContainer" instance=ExtResource("4_eipqg")]
+layout_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_os4ey")
+}
+
+[connection signal="pressed" from="PlayerActions/Actions/Attack" to="." method="_on_attack_pressed"]
+[connection signal="pressed" from="PlayerActions/Actions/Defence" to="." method="_on_defence_pressed"]
+[connection signal="pressed" from="PlayerActions/Actions/Items" to="." method="_on_items_pressed"]
+[connection signal="pressed" from="PlayerActions/Actions/Run" to="." method="_on_run_pressed"]

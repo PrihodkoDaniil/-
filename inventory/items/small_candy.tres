@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="food_item" load_steps=2 format=3 uid="uid://dnki8ufckmehl"]
+
+[ext_resource type="Script" path="res://resources/food_item.gd" id="1_xliy2"]
+
+[resource]
+script = ExtResource("1_xliy2")
+health_restored = 1
+name = "Маленькая конфета"
+description = "Такая розовая и сладкая"
+type = "Еда"
+action = "heal_candy"
+quantity = 2

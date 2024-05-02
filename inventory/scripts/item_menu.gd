@@ -1,12 +1,11 @@
-class_name InventoryMoreInfo
-extends Sprite2D
+extends Panel
 
 enum options {
 	USE,
 	DROP
 }
 
-@export var inventory : Inventory
+@onready var inventory = $"../../.."
 @onready var use_label = $UseLabel
 @onready var drop_label = $DropLabel
 var item_name : String = "Item Name"

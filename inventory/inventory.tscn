@@ -1,17 +1,29 @@
 [gd_scene load_steps=8 format=3 uid="uid://h12mc4mgh74p"]
 
 [ext_resource type="Script" path="res://inventory/scripts/inventory.gd" id="1_15alv"]
-[ext_resource type="Texture2D" uid="uid://dsh8wbkvs54tv" path="res://sprites/inventory sprites/InventoryPanel.png" id="2_1ax4m"]
 [ext_resource type="PackedScene" uid="uid://51f56o6urp1m" path="res://inventory/inventory_ui_item.tscn" id="2_bwddh"]
 [ext_resource type="Script" path="res://inventory/scripts/inventory_ui.gd" id="2_fr4fb"]
+[ext_resource type="Script" path="res://StatsUI/State.gd" id="5_ghuk0"]
 [ext_resource type="Script" path="res://inventory/scripts/item_menu.gd" id="5_qmlj3"]
-[ext_resource type="Texture2D" uid="uid://cjwrhnux3rx2i" path="res://sprites/inventory sprites/InventoryMoreInfoPanel.png" id="5_t51u0"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_spgpd"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqvis"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
 
-[node name="Inventory" type="Node2D" node_paths=PackedStringArray("inventory_ui")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ph83s"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[node name="Inventory" type="Node2D"]
 script = ExtResource("1_15alv")
-inventory_ui = NodePath("CanvasLayer/Control/InventoryPanel/ScrollContainer")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -21,28 +33,27 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="InventoryPanel" type="Sprite2D" parent="CanvasLayer/Control"]
-texture_filter = 1
-position = Vector2(1183.75, 182.021)
-scale = Vector2(4, 3.657)
-texture = ExtResource("2_1ax4m")
+[node name="InventoryPanel" type="Panel" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 1041.0
+offset_top = 101.0
+offset_right = 1278.0
+offset_bottom = 466.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dqvis")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/InventoryPanel" node_paths=PackedStringArray("inventory", "container", "canvas", "more_info_panel")]
-offset_left = -19.0
-offset_top = -45.0
-offset_right = 19.0
-offset_bottom = 43.0
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/InventoryPanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 9.0
+offset_right = 230.0
+offset_bottom = 348.0
 script = ExtResource("2_fr4fb")
-inventory = NodePath("../../../..")
-container = NodePath("VBoxContainer")
-canvas = NodePath("../../..")
-more_info_panel = NodePath("../../InventoryMoreInfo")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/InventoryPanel/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
-theme_override_constants/separation = 13
+theme_override_constants/separation = 40
 
 [node name="Control" parent="CanvasLayer/Control/InventoryPanel/ScrollContainer/VBoxContainer" instance=ExtResource("2_bwddh")]
 layout_mode = 2
@@ -63,109 +74,66 @@ layout_mode = 2
 item_name = "item4"
 item_count = 4
 
-[node name="InventoryMoreInfo" type="Sprite2D" parent="CanvasLayer/Control" node_paths=PackedStringArray("inventory")]
-texture_filter = 3
-position = Vector2(997.75, 261.503)
-scale = Vector2(3.98958, 3.65522)
-texture = ExtResource("5_t51u0")
+[node name="InventoryMoreInfo" type="Panel" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 813.0
+offset_top = 248.0
+offset_right = 1031.0
+offset_bottom = 466.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ph83s")
 script = ExtResource("5_qmlj3")
-inventory = NodePath("../../..")
 
 [node name="ItemNameLabel" type="RichTextLabel" parent="CanvasLayer/Control/InventoryMoreInfo"]
-texture_filter = 5
-offset_left = -22.0
-offset_top = -27.0
-offset_right = 65.0
-offset_bottom = -2.0
+texture_filter = 1
+layout_mode = 0
+offset_left = 15.0
+offset_top = 8.0
+offset_right = 381.0
+offset_bottom = 72.0
 scale = Vector2(0.5, 0.5)
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "Item"
 scroll_active = false
-metadata/_edit_use_anchors_ = true
 
 [node name="ItemDescLabel" type="RichTextLabel" parent="CanvasLayer/Control/InventoryMoreInfo"]
-texture_filter = 3
-offset_left = -22.0
-offset_top = -16.0
-offset_right = 65.0
-offset_bottom = 51.0
+texture_filter = 1
+layout_mode = 0
+offset_left = 16.0
+offset_top = 41.0
+offset_right = 394.0
+offset_bottom = 305.0
 scale = Vector2(0.5, 0.5)
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "Desc"
 scroll_active = false
 
 [node name="UseLabel" type="Label" parent="CanvasLayer/Control/InventoryMoreInfo"]
-texture_filter = 5
-material = SubResource("CanvasItemMaterial_spgpd")
-offset_left = -19.0496
-offset_top = 19.6011
-offset_right = -2.04962
-offset_bottom = 33.6011
+texture_filter = 1
+layout_mode = 0
+offset_left = 41.0
+offset_top = 179.0
+offset_right = 129.0
+offset_bottom = 237.0
 scale = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 9
-text = "use"
+theme_override_font_sizes/font_size = 40
+text = "Исп."
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="DropLabel" type="Label" parent="CanvasLayer/Control/InventoryMoreInfo"]
 texture_filter = 1
-offset_left = 5.76502
-offset_top = 20.3606
-offset_right = 28.765
-offset_bottom = 34.3606
+layout_mode = 0
+offset_left = 114.0
+offset_top = 176.0
+offset_right = 279.0
+offset_bottom = 242.0
 scale = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 9
-text = "drop"
-
-[node name="InventoryStats" type="Sprite2D" parent="CanvasLayer/Control"]
-texture_filter = 1
-position = Vector2(1023, 82)
-scale = Vector2(3, 3.005)
-texture = ExtResource("5_t51u0")
-
-[node name="NameLabel" type="Label" parent="CanvasLayer/Control/InventoryStats"]
-texture_filter = 1
-offset_left = -21.0113
-offset_top = -24.5401
-offset_right = 17.9887
-offset_bottom = -10.5401
-scale = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 12
-text = "Name
-"
+theme_override_font_sizes/font_size = 40
+text = "Бросить"
+horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 2
-language = "ru_RU"
-structured_text_bidi_override = 5
 
-[node name="LvlLabel" type="Label" parent="CanvasLayer/Control/InventoryStats"]
-texture_filter = 1
-offset_left = -21.0
-offset_top = -14.3095
-offset_right = 18.0
-offset_bottom = 2.69052
-scale = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 12
-text = "Lv 1"
-
-[node name="HpLabel" type="Label" parent="CanvasLayer/Control/InventoryStats"]
-texture_filter = 1
-offset_left = -21.0
-offset_top = -4.32612
-offset_right = 21.0
-offset_bottom = 32.6739
-scale = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 12
-text = "HP 20/20"
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="GoldLabel" type="Label" parent="CanvasLayer/Control/InventoryStats"]
-texture_filter = 1
-offset_left = -21.0
-offset_top = 15.3078
-offset_right = 19.0
-offset_bottom = 32.3078
-scale = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 12
-text = "G 0"
+[node name="ItemActions" type="Node2D" parent="."]
+script = ExtResource("5_ghuk0")

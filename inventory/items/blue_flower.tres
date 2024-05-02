@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="food_item" load_steps=2 format=3 uid="uid://dnki8ufckmehl"]
+
+[ext_resource type="Script" path="res://resources/food_item.gd" id="1_chprj"]
+
+[resource]
+script = ExtResource("1_chprj")
+health_restored = 1
+name = "Синий цветок"
+description = "Приятно пахнет"
+action = "heal_item"
+quantity = 2

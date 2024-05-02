@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://cujuyyowvrd7v"]
+
+[ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_0aw07"]
+[ext_resource type="Texture2D" uid="uid://bcftyd2jitybx" path="res://character spite/Bosses/Act 1 Bosss/босс первого акта.png" id="2_er63g"]
+
+[resource]
+script = ExtResource("1_0aw07")
+name = "Цветок-мутант"
+health = 60
+texture = ExtResource("2_er63g")
+damage = 10

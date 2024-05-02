@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="StartStats" load_steps=2 format=3 uid="uid://qyvle4fob06f"]
+
+[ext_resource type="Script" path="res://resources/player_stats.gd" id="1_v2h2e"]
+
+[resource]
+script = ExtResource("1_v2h2e")
+player_class = "Bard"
+max_health = 16
+defence = 14
+strength = 10
+physique = 13
+intelligence = 12
+charisma = 15
+dexterity = 14
+wisdom = 8

@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwpxruqn8hc5j"]
+
+[ext_resource type="Script" path="res://MainMenu/settings_menu.gd" id="1_6ie84"]
+[ext_resource type="Texture2D" uid="uid://budfm8eqw1ges" path="res://other/стена.png" id="2_d0aiv"]
+[ext_resource type="AudioStream" uid="uid://bbpevedx2gp13" path="res://audio/music/relaxation-music.mp3" id="3_7jmqj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udgyu"]
+bg_color = Color(0, 0, 0, 0.670588)
+
+[node name="SettingsMenu" type="Node2D"]
+script = ExtResource("1_6ie84")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Backgrond" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_d0aiv")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -218.0
+offset_right = 224.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_udgyu")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 2
+offset_right = 442.0
+offset_bottom = 210.0
+theme_override_font_sizes/font_size = 56
+text = "Majestic Walls"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 230.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 120
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Звук"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+min_value = -30.0
+max_value = 0.0
+ticks_on_borders = true
+
+[node name="Label2" type="Label" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Разрешение"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+
+[node name="Back" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Назад
+"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7jmqj")
+autoplay = true
+
+[connection signal="value_changed" from="CanvasLayer/Panel/VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Back" to="." method="_on_back_pressed"]

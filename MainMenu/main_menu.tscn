@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnc6xk6dmo60c"]
+
+[ext_resource type="Texture2D" uid="uid://budfm8eqw1ges" path="res://other/стена.png" id="1_7mmvt"]
+[ext_resource type="Script" path="res://MainMenu/main_menu.gd" id="1_j4yfv"]
+[ext_resource type="AudioStream" uid="uid://bbpevedx2gp13" path="res://audio/music/relaxation-music.mp3" id="3_6iur3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udgyu"]
+bg_color = Color(0, 0, 0, 0.670588)
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_j4yfv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Backgrond" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7mmvt")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -218.0
+offset_right = 224.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_udgyu")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 2
+offset_right = 442.0
+offset_bottom = 210.0
+theme_override_font_sizes/font_size = 56
+text = "Majestic Walls"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 386.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 120
+
+[node name="NewGame" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Играть"
+
+[node name="Settings" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Настройки
+"
+
+[node name="Exit" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Выход"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6iur3")
+autoplay = true
+
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://cw3d06nu0sn8g"]
+
+[ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_ifvfe"]
+[ext_resource type="Texture2D" uid="uid://deagf4myh1diy" path="res://character spite/NPC/bard/бард.png" id="2_7bkug"]
+
+[resource]
+script = ExtResource("1_ifvfe")
+name = "Бард"
+health = 25
+texture = ExtResource("2_7bkug")
+damage = 5

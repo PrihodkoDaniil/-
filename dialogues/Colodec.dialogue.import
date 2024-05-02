@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://wy8nvaqe4b6"
+path="res://.godot/imported/Colodec.dialogue-c9173a21d97d72b518426c3f94c0b968.tres"
+
+[deps]
+
+source_file="res://dialogues/Colodec.dialogue"
+dest_files=["res://.godot/imported/Colodec.dialogue-c9173a21d97d72b518426c3f94c0b968.tres"]
+
+[params]
+
+defaults=true

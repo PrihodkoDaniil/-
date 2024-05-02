@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dtxey22y52qpn"
+path="res://.godot/imported/alch_dog.dialogue-d9d6b9943697b11402cfd4222baf44f0.tres"
+
+[deps]
+
+source_file="res://dialogues/alch_dog.dialogue"
+dest_files=["res://.godot/imported/alch_dog.dialogue-d9d6b9943697b11402cfd4222baf44f0.tres"]
+
+[params]
+
+defaults=true

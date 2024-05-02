@@ -1,0 +1,138 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0w5p20erjn8y"]
+
+[ext_resource type="Script" path="res://StatsUI/stats_ui.gd" id="1_6n26c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jaiv6"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xsxyy"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[node name="StatsUI" type="Node2D"]
+script = ExtResource("1_6n26c")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StatsPanel" type="Panel" parent="CanvasLayer/Control"]
+offset_left = 4.0
+offset_top = 182.0
+offset_right = 518.0
+offset_bottom = 670.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jaiv6")
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/StatsPanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 506.0
+offset_bottom = 257.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 30
+columns = 2
+
+[node name="strength" type="Label" parent="CanvasLayer/Control/StatsPanel/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Сила: 10"
+
+[node name="physique" type="Label" parent="CanvasLayer/Control/StatsPanel/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Выносливость: 10"
+horizontal_alignment = 2
+
+[node name="dexterity" type="Label" parent="CanvasLayer/Control/StatsPanel/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Ловкость: 10"
+
+[node name="intelligence" type="Label" parent="CanvasLayer/Control/StatsPanel/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Интеллект: 10"
+horizontal_alignment = 2
+
+[node name="wisdom" type="Label" parent="CanvasLayer/Control/StatsPanel/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Мудрость: 10"
+
+[node name="charisma" type="Label" parent="CanvasLayer/Control/StatsPanel/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Харизма: 10"
+horizontal_alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/StatsPanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 281.0
+offset_right = 504.0
+offset_bottom = 450.0
+theme_override_constants/separation = 20
+
+[node name="weapon" type="Label" parent="CanvasLayer/Control/StatsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Оружие: Секира"
+
+[node name="armor" type="Label" parent="CanvasLayer/Control/StatsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Броня: нет"
+
+[node name="accessories" type="Label" parent="CanvasLayer/Control/StatsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Аксессуары: кольцо"
+
+[node name="OtherStatsPanel" type="Panel" parent="CanvasLayer/Control"]
+offset_left = 549.0
+offset_top = 182.0
+offset_right = 739.0
+offset_bottom = 367.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xsxyy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/OtherStatsPanel"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = 181.0
+offset_bottom = 174.0
+theme_override_constants/separation = 12
+
+[node name="name" type="Label" parent="CanvasLayer/Control/OtherStatsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Имя"
+
+[node name="lv" type="Label" parent="CanvasLayer/Control/OtherStatsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "LV 1"
+
+[node name="hp" type="Label" parent="CanvasLayer/Control/OtherStatsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "HP 20/20"
+
+[node name="gold" type="Label" parent="CanvasLayer/Control/OtherStatsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "G 0"

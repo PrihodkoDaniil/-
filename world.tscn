@@ -1,26 +1,203 @@
-[gd_scene load_steps=14 format=3 uid="uid://dexgyeo0pdcg8"]
+[gd_scene load_steps=74 format=3 uid="uid://dexgyeo0pdcg8"]
 
+[ext_resource type="Script" path="res://main.gd" id="1_7g4j7"]
 [ext_resource type="Texture2D" uid="uid://d4gw2dlljwvqv" path="res://Landscape/lug.png" id="1_bf8qh"]
 [ext_resource type="Texture2D" uid="uid://dptb2ksk7g7eq" path="res://Landscape/Forest.png" id="2_7unnl"]
 [ext_resource type="PackedScene" uid="uid://eoq44uwtlaa8" path="res://player.tscn" id="2_78yo6"]
 [ext_resource type="Texture2D" uid="uid://dyv3oue2it5vf" path="res://Landscape/Trees/Tree 1.png" id="3_0e1sy"]
-[ext_resource type="Texture2D" uid="uid://i0sf62i6amxh" path="res://other/House1.png" id="3_7p6e1"]
-[ext_resource type="Texture2D" uid="uid://c4q6ujpgys3cc" path="res://other/House2.png" id="4_03t3r"]
-[ext_resource type="Texture2D" uid="uid://vk8qhfknaooa" path="res://sprites/character sprites/dummy_front.png" id="4_ioiyt"]
-[ext_resource type="Texture2D" uid="uid://30j4w0jdvhrf" path="res://other/House3.png" id="5_5ub8e"]
+[ext_resource type="Texture2D" uid="uid://bdo5xw3bwl35n" path="res://other/Old house.png" id="3_nhoxq"]
+[ext_resource type="Texture2D" uid="uid://bj4n0epsqg6ju" path="res://other/BardHouse.png" id="4_h8tve"]
+[ext_resource type="Texture2D" uid="uid://qhpwjtlrx65g" path="res://Landscape/грядка паханая.png" id="4_m5hkw"]
+[ext_resource type="Texture2D" uid="uid://cy0lq0fi3la0k" path="res://Landscape/грядка.png" id="5_63xcn"]
 [ext_resource type="Script" path="res://other/Actionable.gd" id="5_dt410"]
+[ext_resource type="Texture2D" uid="uid://d216ktrlvbhq7" path="res://other/Alchemist house.png" id="5_qn05j"]
+[ext_resource type="Texture2D" uid="uid://cvfp1dp8gskjl" path="res://other/DryidHouse.png" id="6_2uhf5"]
 [ext_resource type="Resource" uid="uid://njij2plxigka" path="res://dialogues/druid.dialogue" id="6_8bobb"]
+[ext_resource type="Script" path="res://Dryid.gd" id="6_vtvjd"]
+[ext_resource type="Texture2D" uid="uid://b6ykx8m8kuno5" path="res://character spite/NPC/Dryid/друид2.png" id="7_ltmni"]
+[ext_resource type="Texture2D" uid="uid://6ab81ffafyni" path="res://character spite/NPC/Dryid/друидвдох.png" id="8_lirf7"]
+[ext_resource type="Texture2D" uid="uid://civgo1ctgwc7f" path="res://character spite/NPC/Dryid/друидвыдох.png" id="9_u4ybx"]
+[ext_resource type="Script" path="res://Dryidanim.gd" id="10_hm40t"]
 [ext_resource type="PackedScene" uid="uid://h12mc4mgh74p" path="res://inventory/inventory.tscn" id="11_ejwdm"]
+[ext_resource type="PackedScene" uid="uid://bh234t4c2xdk2" path="res://combat/combat_system.tscn" id="12_4wjr6"]
+[ext_resource type="Texture2D" uid="uid://csk1ky43mh6in" path="res://character spite/NPC/Alchemist dog/собака.png" id="14_7m480"]
+[ext_resource type="Script" path="res://Alchemist dog.gd" id="14_r1lm7"]
+[ext_resource type="Texture2D" uid="uid://deagf4myh1diy" path="res://character spite/NPC/bard/бард.png" id="15_cxw15"]
+[ext_resource type="Script" path="res://Elder.gd" id="16_a3017"]
+[ext_resource type="Texture2D" uid="uid://dd1h0yeekwb2o" path="res://character spite/NPC/Elder/бабка.png" id="16_j78fg"]
+[ext_resource type="Texture2D" uid="uid://cuxfj6fa4f67s" path="res://character spite/NPC/Alchemist dog/собака вдох.png" id="16_owlkg"]
+[ext_resource type="Texture2D" uid="uid://bd1ug1rhn2g51" path="res://character spite/NPC/Alchemist dog/собака выдох.png" id="17_kl6ij"]
+[ext_resource type="Texture2D" uid="uid://b430x04dg8ko5" path="res://character spite/NPC/Elder/бабка вдох.png" id="18_7lj5s"]
+[ext_resource type="Script" path="res://Bard.gd" id="18_by3ab"]
+[ext_resource type="Resource" uid="uid://dtxey22y52qpn" path="res://dialogues/alch_dog.dialogue" id="18_kdtt7"]
+[ext_resource type="PackedScene" uid="uid://b0w5p20erjn8y" path="res://StatsUI/stats.tscn" id="18_wvvsw"]
+[ext_resource type="Texture2D" uid="uid://dlukky1uhuok2" path="res://character spite/NPC/Elder/бабка выдох.png" id="19_kbssh"]
+[ext_resource type="Texture2D" uid="uid://bcftyd2jitybx" path="res://character spite/Bosses/Act 1 Bosss/босс первого акта.png" id="20_mifnn"]
+[ext_resource type="Texture2D" uid="uid://dksxixre2s7qm" path="res://character spite/NPC/bard/бард вдох.png" id="20_yccf4"]
+[ext_resource type="Texture2D" uid="uid://chqqhw2a8iel8" path="res://character spite/NPC/bard/бард выдох.png" id="21_10mg3"]
+[ext_resource type="Resource" uid="uid://2xj07pbduxq3" path="res://dialogues/bard.dialogue" id="23_3ki1b"]
+[ext_resource type="Script" path="res://BOSS.gd" id="26_dwidx"]
+[ext_resource type="Texture2D" uid="uid://byrixdwr6olxb" path="res://character spite/Bosses/Act 1 Bosss/босс первого акта анимация 1.png" id="28_2v7ay"]
+[ext_resource type="Resource" uid="uid://1yjf8ybt2oa3" path="res://dialogues/elder.dialogue" id="28_32v3f"]
+[ext_resource type="Texture2D" uid="uid://c1bis4a3t7wyy" path="res://character spite/Bosses/Act 1 Bosss/босс первого акта анимация 2.png" id="29_3v25d"]
+[ext_resource type="Resource" uid="uid://cr0imipbrk1pt" path="res://dialogues/boss1.dialogue" id="33_la0cw"]
+[ext_resource type="Script" path="res://Scripts/sound_player.gd" id="37_5h55q"]
+[ext_resource type="Texture2D" uid="uid://xouvmujgfeko" path="res://other/Бардская кровать.png" id="40_woaau"]
+[ext_resource type="Texture2D" uid="uid://ce0836yv152al" path="res://other/Бочка.png" id="41_cn38w"]
+[ext_resource type="Texture2D" uid="uid://by7oufor4se5i" path="res://other/Колодец.png" id="42_77tgg"]
+[ext_resource type="Texture2D" uid="uid://dewqkcuwmne5h" path="res://other/ящик.png" id="42_rb2yh"]
+[ext_resource type="Resource" uid="uid://dqa2506w8e10c" path="res://dialogues/bochka.dialogue" id="42_sinsr"]
+[ext_resource type="Texture2D" uid="uid://ybkg5ntsb0ly" path="res://other/Забор бок.png" id="43_a1fq3"]
+[ext_resource type="Resource" uid="uid://d11ax8xjtlp4u" path="res://dialogues/box.dialogue" id="44_hmgjq"]
+[ext_resource type="Texture2D" uid="uid://0isfg8luvivn" path="res://other/Забор перед.png" id="44_p2v20"]
+[ext_resource type="AudioStream" uid="uid://bbpevedx2gp13" path="res://audio/music/relaxation-music.mp3" id="45_dfvxr"]
+[ext_resource type="Resource" uid="uid://wy8nvaqe4b6" path="res://dialogues/Colodec.dialogue" id="45_tdrp2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_skdfn"]
 radius = 35.0
 height = 86.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_exxh5"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("7_ltmni")
+}, {
+"duration": 3.0,
+"texture": ExtResource("8_lirf7")
+}, {
+"duration": 3.0,
+"texture": ExtResource("9_u4ybx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w4ejp"]
 radius = 61.0
 height = 122.0
 
-[node name="World" type="Node2D"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_x6ha2"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("14_7m480")
+}, {
+"duration": 3.0,
+"texture": ExtResource("16_owlkg")
+}, {
+"duration": 3.0,
+"texture": ExtResource("17_kl6ij")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cu7r1"]
+radius = 36.1754
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4q1sv"]
+radius = 45.0
+height = 90.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yj5eu"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("15_cxw15")
+}, {
+"duration": 3.0,
+"texture": ExtResource("20_yccf4")
+}, {
+"duration": 3.0,
+"texture": ExtResource("21_10mg3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eydbb"]
+radius = 61.0
+height = 122.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pj7cf"]
+radius = 89.0
+height = 178.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u4kse"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("16_j78fg")
+}, {
+"duration": 3.0,
+"texture": ExtResource("18_7lj5s")
+}, {
+"duration": 3.0,
+"texture": ExtResource("19_kbssh")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vg0a8"]
+radius = 85.0
+height = 176.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qbqxf"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("20_mifnn")
+}, {
+"duration": 3.0,
+"texture": ExtResource("28_2v7ay")
+}, {
+"duration": 3.0,
+"texture": ExtResource("29_3v25d")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ws8tg"]
+radius = 263.0
+height = 526.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x630l"]
+radius = 355.0
+height = 710.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mmgxe"]
+radius = 519.839
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_epg5x"]
+radius = 124.909
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b738e"]
+radius = 273.814
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46vj5"]
+size = Vector2(141, 53)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_87gyg"]
+radius = 32.0
+height = 94.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xn4h"]
+size = Vector2(57, 72)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6mgbv"]
+radius = 55.001
+height = 170.0
+
+[node name="1Act" type="Node2D"]
+script = ExtResource("1_7g4j7")
 
 [node name="Location" type="StaticBody2D" parent="."]
 
@@ -102,7 +279,7 @@ polygon = PackedVector2Array(-1290, 265, -1277, 265, -938, 294, -705, 599, -516,
 [node name="Village" type="CollisionPolygon2D" parent="Location"]
 visible = false
 position = Vector2(1199, -3552)
-polygon = PackedVector2Array(5823, 179, 8418, 172, 8388, 3778, 8214, 3778, 7430, 905, 6858, 913, 6080, 3799, 5835, 3799)
+polygon = PackedVector2Array(5823, 179, 8418, 172, 8388, 3778, 8279, 3780, 7740, 927, 6636, 931, 5945, 3796, 5835, 3799)
 
 [node name="Dryid house" type="CollisionPolygon2D" parent="Location"]
 visible = false
@@ -113,51 +290,227 @@ polygon = PackedVector2Array(5809.9, 3354.4, 6289, 3350, 6277, 3802, 5835, 3799)
 visible = false
 polygon = PackedVector2Array(7039, 564, 7072, 592, 7266, 866, 7330, 1326, 7446, 1526, 7778, 1546, 8054, 1598, 8494, 1598, 9014, 1554, 9274, 1334, 9478, 878, 9570, 446, 9602, 438, 9594, 1766, 7050, 1746)
 
+[node name="AlchemistHouse" type="CollisionPolygon2D" parent="Location"]
+visible = false
+polygon = PackedVector2Array(7565, 417, 8036, 419, 8027, 869, 8002, 871, 8000, 886, 7917, 889, 7912, 872, 7590, 871, 7568, 861, 7564, 869, 7550, 869, 7547, 783, 7577, 783, 7576, 746, 7561, 746, 7560, 717, 7564, 471, 7550, 457, 7551, 441)
+
+[node name="BardHouse" type="CollisionPolygon2D" parent="Location"]
+visible = false
+polygon = PackedVector2Array(8860, 910, 9190, 911, 9190, 929, 9279, 929, 9277, 912, 9310, 910, 9317, 774, 9315, 512, 9328, 505, 9328, 485, 9312, 457, 8843, 459, 8831, 479, 8831, 503, 8839, 524, 8837, 758, 8839, 784, 8854, 788)
+
+[node name="ElderHouse" type="CollisionPolygon2D" parent="Location"]
+visible = false
+polygon = PackedVector2Array(8621, -11, 8613, 112, 8599, 133, 8515, 135, 8510, 116, 8192, 115, 8192, -10, 8156, -10, 8158, -40, 8164, -40, 8159, -185, 8172, -513, 8388, -736, 8409, -736, 8623, -507, 8630, -132, 8636, -39, 8638, -14)
+
+[node name="Zabor" type="CollisionPolygon2D" parent="Location"]
+visible = false
+polygon = PackedVector2Array(7695, -362, 7432, -348, 7427, -454, 7580, -1000, 7687, -1563, 7816, -2077, 7883, -2432, 7901, -2516, 8197, -2530, 8199, -2467, 7930, -2452, 7914, -2317, 7896, -2215, 7866, -2031, 7851, -1937, 7829, -1857, 7811, -1776, 7774, -1602, 7730, -1407, 7706, -1266, 7683, -1091, 7661, -921, 7588, -758, 7542, -648, 7487, -478, 7470, -431, 7693, -436)
+
+[node name="Zabor2" type="CollisionPolygon2D" parent="Location"]
+visible = false
+polygon = PackedVector2Array(7792, -365, 8906, -399, 8901, -478, 7792, -432)
+
+[node name="Zabor3" type="CollisionPolygon2D" parent="Location"]
+visible = false
+polygon = PackedVector2Array(8990, -407, 9301, -418, 9319, -436, 9319, -546, 9155, -1280, 9139, -1511, 8983, -1987, 8849, -2414, 8846, -2571, 8284, -2541, 8286, -2466, 8791, -2484, 8818, -2485, 8824, -2303, 8985, -1813, 9095, -1417, 9105, -1395, 9125, -1074, 9142, -1054, 9149, -945, 9167, -910, 9181, -821, 9207, -728, 9280, -506, 9287, -480, 8984, -463)
+
+[node name="Грядки" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(7789, -823)
+scale = Vector2(2.82463, 3.25962)
+texture = ExtResource("4_m5hkw")
+
+[node name="Грядки" type="Sprite2D" parent="Грядки"]
+position = Vector2(7.43447, -50.9262)
+scale = Vector2(1.00206, 1.05384)
+texture = ExtResource("5_63xcn")
+
+[node name="Грядки" type="Sprite2D" parent="Грядки/Грядки"]
+position = Vector2(17.4904, -49.9342)
+scale = Vector2(1.15215, 1.092)
+texture = ExtResource("4_m5hkw")
+
+[node name="Грядки" type="Sprite2D" parent="Грядки/Грядки/Грядки"]
+position = Vector2(166.966, 90.5136)
+scale = Vector2(0.989431, 1.00867)
+texture = ExtResource("5_63xcn")
+
+[node name="Грядки" type="Sprite2D" parent="Грядки/Грядки/Грядки/Грядки"]
+position = Vector2(-0.619873, -52.0658)
+scale = Vector2(0.989431, 1.00867)
+texture = ExtResource("4_m5hkw")
+
+[node name="Грядки" type="Sprite2D" parent="Грядки/Грядки/Грядки/Грядки/Грядки"]
+position = Vector2(3.13244, -46.6396)
+scale = Vector2(0.989431, 1.00867)
+texture = ExtResource("5_63xcn")
+
+[node name="Грядки" type="Sprite2D" parent="Грядки/Грядки/Грядки/Грядки/Грядки/Грядки"]
+position = Vector2(179.182, 90.3992)
+scale = Vector2(0.989431, 1.00867)
+texture = ExtResource("4_m5hkw")
+
+[node name="Грядки" type="Sprite2D" parent="Грядки/Грядки/Грядки/Грядки/Грядки/Грядки/Грядки"]
+texture_filter = 1
+position = Vector2(-3.83953, -44.5534)
+scale = Vector2(0.989431, 1.00867)
+texture = ExtResource("4_m5hkw")
+
+[node name="Грядки" type="Sprite2D" parent="Грядки/Грядки/Грядки/Грядки/Грядки/Грядки/Грядки/Грядки"]
+position = Vector2(-4.20391, -44.9363)
+scale = Vector2(0.989431, 1.00867)
+texture = ExtResource("5_63xcn")
+
 [node name="House" type="Sprite2D" parent="."]
 texture_filter = 5
 position = Vector2(8360, -293)
 scale = Vector2(2.84048, 3.12774)
-texture = ExtResource("3_7p6e1")
+texture = ExtResource("3_nhoxq")
 
 [node name="House2" type="Sprite2D" parent="."]
 texture_filter = 5
 position = Vector2(9079, 673)
 scale = Vector2(2.84048, 3.12774)
-texture = ExtResource("4_03t3r")
+texture = ExtResource("4_h8tve")
 
 [node name="House3" type="Sprite2D" parent="."]
 texture_filter = 5
 position = Vector2(7803, 634)
 scale = Vector2(2.84048, 3.12774)
-texture = ExtResource("5_5ub8e")
+texture = ExtResource("5_qn05j")
 
-[node name="House4" type="Sprite2D" parent="."]
+[node name="DryidHouse" type="Sprite2D" parent="."]
 texture_filter = 5
 position = Vector2(6015.1, 3734.6)
 scale = Vector2(2.84048, 3.12774)
-texture = ExtResource("4_03t3r")
+texture = ExtResource("6_2uhf5")
 
-[node name="NPC" type="StaticBody2D" parent="."]
+[node name="Dryid" type="CharacterBody2D" parent="."]
+script = ExtResource("6_vtvjd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC"]
-position = Vector2(5830, 4013)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dryid"]
+visible = false
+position = Vector2(5830, 4006)
 shape = SubResource("CapsuleShape2D_skdfn")
 
-[node name="DummyFront" type="Sprite2D" parent="NPC"]
-position = Vector2(5830, 4009)
-scale = Vector2(1.58108, 1.5625)
-texture = ExtResource("4_ioiyt")
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Dryid"]
+texture_filter = 1
+position = Vector2(5830, 4004)
+scale = Vector2(1.60417, 1.66327)
+sprite_frames = SubResource("SpriteFrames_exxh5")
+animation = &"idle"
+frame_progress = 0.96815
+script = ExtResource("10_hm40t")
 
-[node name="Actionable" type="Area2D" parent="NPC"]
+[node name="Actionable" type="Area2D" parent="Dryid"]
+visible = false
 script = ExtResource("5_dt410")
 dialogue_resource = ExtResource("6_8bobb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/Actionable"]
+[node name="DruidAction" type="CollisionShape2D" parent="Dryid/Actionable"]
+visible = false
 position = Vector2(5829, 4013)
 shape = SubResource("CapsuleShape2D_w4ejp")
 
-[node name="Player" parent="." instance=ExtResource("2_78yo6")]
-position = Vector2(352, 23)
+[node name="AlchemistDog" type="CharacterBody2D" parent="."]
+script = ExtResource("14_r1lm7")
+
+[node name="DogSprite" type="AnimatedSprite2D" parent="AlchemistDog"]
+texture_filter = 1
+position = Vector2(7609, 872)
+scale = Vector2(0.532258, 0.544248)
+sprite_frames = SubResource("SpriteFrames_x6ha2")
+animation = &"idle"
+
+[node name="DogCol" type="CollisionShape2D" parent="AlchemistDog"]
+visible = false
+position = Vector2(7609.88, 875)
+shape = SubResource("CircleShape2D_cu7r1")
+
+[node name="Actionable" type="Area2D" parent="AlchemistDog"]
+visible = false
+script = ExtResource("5_dt410")
+dialogue_resource = ExtResource("18_kdtt7")
+
+[node name="DogAction" type="CollisionShape2D" parent="AlchemistDog/Actionable"]
+position = Vector2(7609, 877)
+shape = SubResource("CapsuleShape2D_4q1sv")
+
+[node name="Bard" type="CharacterBody2D" parent="."]
+script = ExtResource("18_by3ab")
+
+[node name="BardSprite" type="AnimatedSprite2D" parent="Bard"]
+texture_filter = 1
+position = Vector2(9232, 887)
+scale = Vector2(1.97727, 2.02551)
+sprite_frames = SubResource("SpriteFrames_yj5eu")
+animation = &"idle"
+
+[node name="BardCol" type="CollisionShape2D" parent="Bard"]
+visible = false
+position = Vector2(9231, 889)
+shape = SubResource("CapsuleShape2D_eydbb")
+
+[node name="Action" type="Area2D" parent="Bard"]
+visible = false
+script = ExtResource("5_dt410")
+dialogue_resource = ExtResource("23_3ki1b")
+
+[node name="BardAction" type="CollisionShape2D" parent="Bard/Action"]
+position = Vector2(9229, 886)
+shape = SubResource("CapsuleShape2D_pj7cf")
+
+[node name="Elder" type="CharacterBody2D" parent="."]
+script = ExtResource("16_a3017")
+
+[node name="ElderSprite" type="AnimatedSprite2D" parent="Elder"]
+texture_filter = 1
+position = Vector2(8488, 87)
+scale = Vector2(2.0393, 2.00765)
+sprite_frames = SubResource("SpriteFrames_u4kse")
+animation = &"Idle"
+frame_progress = 0.649069
+
+[node name="ElderCol" type="CollisionShape2D" parent="Elder"]
+visible = false
+position = Vector2(8491, 88)
+shape = SubResource("CapsuleShape2D_eydbb")
+
+[node name="Action" type="Area2D" parent="Elder"]
+visible = false
+script = ExtResource("5_dt410")
+dialogue_resource = ExtResource("28_32v3f")
+
+[node name="ElderAction" type="CollisionShape2D" parent="Elder/Action"]
+position = Vector2(8490, 90)
+shape = SubResource("CapsuleShape2D_vg0a8")
+
+[node name="BOSS" type="CharacterBody2D" parent="."]
+script = ExtResource("26_dwidx")
+
+[node name="FirstBossSprite" type="AnimatedSprite2D" parent="BOSS"]
+texture_filter = 1
+position = Vector2(8371, -2093)
+scale = Vector2(5.36376, 4.75)
+sprite_frames = SubResource("SpriteFrames_qbqxf")
+animation = &"idle"
+
+[node name="BossColFirst" type="CollisionShape2D" parent="BOSS"]
+visible = false
+position = Vector2(8377, -2096)
+shape = SubResource("CapsuleShape2D_ws8tg")
+
+[node name="Action" type="Area2D" parent="BOSS"]
+visible = false
+script = ExtResource("5_dt410")
+dialogue_resource = ExtResource("33_la0cw")
+
+[node name="Boss1Action" type="CollisionShape2D" parent="BOSS/Action"]
+position = Vector2(8377, -2109)
+shape = SubResource("CapsuleShape2D_x630l")
+
+[node name="PlayerBody" parent="." instance=ExtResource("2_78yo6")]
+position = Vector2(8343, -242)
 
 [node name="Tree 2" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -3618,4 +3971,590 @@ position = Vector2(-65.6458, 6.7622)
 scale = Vector2(1.09232, 1.02775)
 texture = ExtResource("3_0e1sy")
 
+[node name="Objects" type="StaticBody2D" parent="."]
+
+[node name="БардскаяКровать" type="Sprite2D" parent="Objects"]
+texture_filter = 1
+position = Vector2(8750, 839)
+scale = Vector2(2.19444, 1.875)
+texture = ExtResource("40_woaau")
+
+[node name="Бочка" type="Sprite2D" parent="Objects"]
+position = Vector2(7875, 862)
+scale = Vector2(0.105861, 0.114883)
+texture = ExtResource("41_cn38w")
+
+[node name="Actionable" type="Area2D" parent="Objects/Бочка"]
+visible = false
+script = ExtResource("5_dt410")
+dialogue_resource = ExtResource("42_sinsr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Бочка/Actionable"]
+position = Vector2(-28.3389, -0.000534058)
+shape = SubResource("CircleShape2D_mmgxe")
+
+[node name="Ящик" type="Sprite2D" parent="Objects"]
+position = Vector2(8057, 809)
+scale = Vector2(0.474194, 0.398936)
+texture = ExtResource("42_rb2yh")
+
+[node name="Бочка2" type="Sprite2D" parent="Objects"]
+position = Vector2(8170, 81)
+scale = Vector2(0.10287, 0.10705)
+texture = ExtResource("41_cn38w")
+
+[node name="Ящик2" type="Sprite2D" parent="Objects"]
+position = Vector2(8350, 106)
+scale = Vector2(0.456452, 0.351064)
+texture = ExtResource("42_rb2yh")
+
+[node name="Actionable" type="Area2D" parent="Objects/Ящик2"]
+visible = false
+script = ExtResource("5_dt410")
+dialogue_resource = ExtResource("44_hmgjq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Ящик2/Actionable"]
+visible = false
+position = Vector2(4.37946, 11.3939)
+shape = SubResource("CircleShape2D_epg5x")
+
+[node name="Колодец" type="Sprite2D" parent="Objects"]
+position = Vector2(8475, 454)
+scale = Vector2(0.378307, 0.419169)
+texture = ExtResource("42_77tgg")
+
+[node name="Actionable" type="Area2D" parent="Objects/Колодец"]
+visible = false
+script = ExtResource("5_dt410")
+dialogue_resource = ExtResource("45_tdrp2")
+
+[node name="ColodecCollision" type="CollisionShape2D" parent="Objects/Колодец/Actionable"]
+position = Vector2(-10.5764, -3.62396e-05)
+shape = SubResource("CircleShape2D_b738e")
+
+[node name="GamakCollision" type="CollisionShape2D" parent="Objects"]
+visible = false
+position = Vector2(8750.5, 879.5)
+shape = SubResource("RectangleShape2D_46vj5")
+
+[node name="BochkaCollision" type="CollisionShape2D" parent="Objects"]
+visible = false
+position = Vector2(7874, 862)
+shape = SubResource("CapsuleShape2D_87gyg")
+
+[node name="BochkaCollision2" type="CollisionShape2D" parent="Objects"]
+visible = false
+position = Vector2(8166, 77)
+shape = SubResource("CapsuleShape2D_87gyg")
+
+[node name="BoxCollision" type="CollisionShape2D" parent="Objects"]
+visible = false
+position = Vector2(8354, 102)
+shape = SubResource("RectangleShape2D_0xn4h")
+
+[node name="BoxCollision2" type="CollisionShape2D" parent="Objects"]
+visible = false
+position = Vector2(8061, 810)
+shape = SubResource("RectangleShape2D_0xn4h")
+
+[node name="KolodtcOllision" type="CollisionShape2D" parent="Objects"]
+visible = false
+position = Vector2(8472, 456)
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_6mgbv")
+
+[node name="Забор" type="Sprite2D" parent="Objects"]
+texture_filter = 1
+position = Vector2(8123, -415)
+scale = Vector2(0.563284, 0.504717)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор"]
+texture_filter = 1
+position = Vector2(-142.024, 1.9813)
+scale = Vector2(0.852769, 1.04884)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-142.024, 4.90101)
+scale = Vector2(0.852769, 1.01211)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-160.34, 1.9813)
+scale = Vector2(1.08462, 1.04884)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-167.984, 5.61789)
+scale = Vector2(1.18138, 1.0031)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-352.413, 7.4281)
+scale = Vector2(1.09713, 1.0031)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор/Забор/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-157.146, 7.07426)
+scale = Vector2(1.05512, 1.0031)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор/Забор/Забор/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-139.895, 7.05247)
+scale = Vector2(0.82424, 1.0031)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор2" type="Sprite2D" parent="Objects/Забор"]
+texture_filter = 1
+position = Vector2(2027.4, -75.2897)
+scale = Vector2(0.83929, 0.907425)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор2"]
+texture_filter = 1
+position = Vector2(-142.024, 1.9813)
+scale = Vector2(0.852769, 1.04884)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор2/Забор"]
+texture_filter = 1
+position = Vector2(-142.024, 4.90101)
+scale = Vector2(0.852769, 1.01211)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор2/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-160.34, 1.9813)
+scale = Vector2(1.08462, 1.04884)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор2/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-167.984, 5.61789)
+scale = Vector2(1.18138, 1.0031)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор2/Забор/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-352.413, 7.4281)
+scale = Vector2(1.09713, 1.0031)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор2/Забор/Забор/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-157.146, 7.07426)
+scale = Vector2(1.05512, 1.0031)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор2/Забор/Забор/Забор/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-139.895, 7.05247)
+scale = Vector2(0.82424, 1.0031)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор2/Забор/Забор/Забор/Забор/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-149.21, 7.05247)
+scale = Vector2(0.942146, 1.0031)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор3" type="Sprite2D" parent="Objects/Забор"]
+texture_filter = 1
+position = Vector2(775.808, -4162.73)
+scale = Vector2(0.83929, 0.907425)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор3"]
+texture_filter = 1
+position = Vector2(-142.024, 1.9813)
+scale = Vector2(0.852769, 1.04884)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор3/Забор"]
+texture_filter = 1
+position = Vector2(-142.024, 4.90101)
+scale = Vector2(0.852769, 1.01211)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор3/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-160.34, 1.9813)
+scale = Vector2(1.08462, 1.04884)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор3/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-167.984, 5.61789)
+scale = Vector2(1.18138, 1.0031)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор3/Забор/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-352.413, 7.4281)
+scale = Vector2(1.09713, 1.0031)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор3/Забор/Забор/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-157.146, 7.07426)
+scale = Vector2(1.05512, 1.0031)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор3/Забор/Забор/Забор/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-139.895, 7.05247)
+scale = Vector2(0.82424, 1.0031)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор3/Забор/Забор/Забор/Забор/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(-149.21, 7.05247)
+scale = Vector2(0.942146, 1.0031)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор3/Забор/Забор/Забор/Забор/Забор/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(1715.68, -49.7997)
+scale = Vector2(1.19028, 1.0031)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор3/Забор/Забор/Забор/Забор/Забор/Забор/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(167.602, -5.77539)
+scale = Vector2(1.19028, 1.0031)
+texture = ExtResource("43_a1fq3")
+
+[node name="Забор" type="Sprite2D" parent="Objects/Забор/Забор3/Забор/Забор/Забор/Забор/Забор/Забор/Забор/Забор/Забор/Забор"]
+texture_filter = 1
+position = Vector2(149.965, -5.77539)
+scale = Vector2(0.967032, 1.0031)
+texture = ExtResource("43_a1fq3")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects"]
+texture_filter = 1
+position = Vector2(7914, -2450)
+scale = Vector2(0.530731, 0.544828)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-26.3782, 145)
+scale = Vector2(1.16113, 0.766085)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-27.5867, 210.837)
+scale = Vector2(0.899789, 1.18838)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-25.2485, 181.448)
+scale = Vector2(1.09155, 1.01425)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-25.2485, 181.448)
+scale = Vector2(1.09155, 1.01425)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-25.2485, 181.448)
+scale = Vector2(1.09155, 1.01425)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-28.603, 163.209)
+scale = Vector2(0.981561, 0.888468)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-25.2485, 181.448)
+scale = Vector2(1.09155, 1.01425)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-25.2485, 181.448)
+scale = Vector2(1.09155, 1.01425)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-25.2485, 181.448)
+scale = Vector2(1.09155, 1.01425)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-25.2485, 181.448)
+scale = Vector2(1.09155, 1.01425)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-19.8955, 201.906)
+scale = Vector2(0.929899, 1.15534)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-28.0914, 214.221)
+scale = Vector2(0.95617, 1.26469)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-26.0233, 211.109)
+scale = Vector2(1.1781, 1.26469)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-26.0233, 180.138)
+scale = Vector2(1.1781, 1.05109)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-31.1313, 133.347)
+scale = Vector2(0.888648, 0.72182)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-27.9081, 139.709)
+scale = Vector2(0.888648, 0.72182)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-24.4823, 141.542)
+scale = Vector2(0.745657, 0.72182)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-27.3456, 171.344)
+scale = Vector2(0.911646, 0.99153)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-27.3456, 161.482)
+scale = Vector2(0.911646, 0.923513)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-27.3456, 172.318)
+scale = Vector2(0.911646, 0.998249)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-34.9079, 160.349)
+scale = Vector2(1.13734, 1.16779)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-22.4994, 140.336)
+scale = Vector2(1.096, 0.903449)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(-23.2503, 206.463)
+scale = Vector2(0.99581, 1.19338)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный"]
+texture_filter = 1
+position = Vector2(1730.32, -75.2532)
+scale = Vector2(1.33826, 0.962287)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(6.56592, 131.609)
+scale = Vector2(0.911597, 0.888927)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(1.54516, 133.034)
+scale = Vector2(0.981137, 0.888927)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(36.2057, 147.243)
+scale = Vector2(0.981137, 1.00214)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(33.0895, 145.809)
+scale = Vector2(0.866506, 1.00214)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(36.3359, 142.615)
+scale = Vector2(0.987775, 1.00214)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(35.4169, 146.316)
+scale = Vector2(0.987775, 1.00214)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(34.5559, 142.506)
+scale = Vector2(0.987775, 1.00214)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(35.6767, 147.951)
+scale = Vector2(0.987775, 1.00214)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(34.9614, 143.525)
+scale = Vector2(0.987775, 1.00214)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(34.3087, 148.315)
+scale = Vector2(0.987775, 1.00214)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(35.7146, 148.025)
+scale = Vector2(0.987775, 1.00214)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(35.2178, 149.789)
+scale = Vector2(0.987775, 1.00214)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(36.8331, 148.868)
+scale = Vector2(0.987775, 1.00214)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(34.4322, 142.921)
+scale = Vector2(0.987775, 1.00214)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(40.43, 150.8)
+scale = Vector2(1.19364, 1.00214)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(38.6126, 170.07)
+scale = Vector2(1.19364, 1.15936)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(40.4082, 165.93)
+scale = Vector2(1.19364, 1.15936)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(3.47978, 161.186)
+scale = Vector2(1.11003, 1.15936)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(8.87412, 203.382)
+scale = Vector2(0.875028, 1.15727)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(31.6912, 173.139)
+scale = Vector2(1.1636, 0.999827)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(30.0935, 176.211)
+scale = Vector2(0.862393, 0.859092)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(33.2097, 169.73)
+scale = Vector2(0.938983, 0.809851)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(30.8779, 174.485)
+scale = Vector2(0.938983, 0.809851)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(35.1338, 174.917)
+scale = Vector2(0.938983, 0.809851)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(32.2327, 198.593)
+scale = Vector2(0.938983, 1.06745)
+texture = ExtResource("44_p2v20")
+
+[node name="ЗаБор вертикальный2" type="Sprite2D" parent="Objects/ЗаБор вертикальный/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2/ЗаБор вертикальный2"]
+texture_filter = 1
+position = Vector2(34.3266, 183.747)
+scale = Vector2(0.938983, 1.06745)
+texture = ExtResource("44_p2v20")
+
 [node name="Inventory" parent="." instance=ExtResource("11_ejwdm")]
+visible = false
+
+[node name="CombatSystem" parent="." instance=ExtResource("12_4wjr6")]
+visible = false
+
+[node name="StatsUI" parent="." instance=ExtResource("18_wvvsw")]
+position = Vector2(-2, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource("37_5h55q")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("45_dfvxr")
+autoplay = true
