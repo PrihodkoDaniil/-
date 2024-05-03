@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://drejjyi7a4m6d"]
+
+[ext_resource type="Script" path="res://ai/Wander.gd" id="1_ulfrn"]
+
+[node name="Wander" type="Node2D"]
+script = ExtResource("1_ulfrn")

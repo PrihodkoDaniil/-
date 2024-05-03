@@ -90,6 +90,8 @@ height = 88.0
 radius = 51.0392
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(444, 27)
+collision_layer = 3
 script = ExtResource("1_txsbg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -106,15 +108,14 @@ position = Vector2(200, 491)
 shape = SubResource("CapsuleShape2D_4e68m")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(199, 498)
-limit_smoothed = true
+position = Vector2(199, 491)
 
 [node name="Direction" type="Marker2D" parent="."]
+visible = false
+position = Vector2(200, 491)
 
 [node name="ActionableFinder" type="Area2D" parent="Direction"]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
-visible = false
-position = Vector2(199, 485)
+position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_e5s5k")

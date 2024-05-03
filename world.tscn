@@ -1,27 +1,16 @@
-<<<<<<< HEAD
-[gd_scene load_steps=74 format=3 uid="uid://dexgyeo0pdcg8"]
-=======
-[gd_scene load_steps=21 format=3 uid="uid://dexgyeo0pdcg8"]
->>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1
+[gd_scene load_steps=75 format=3 uid="uid://dexgyeo0pdcg8"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7g4j7"]
 [ext_resource type="Texture2D" uid="uid://d4gw2dlljwvqv" path="res://Landscape/lug.png" id="1_bf8qh"]
 [ext_resource type="Texture2D" uid="uid://dptb2ksk7g7eq" path="res://Landscape/Forest.png" id="2_7unnl"]
 [ext_resource type="PackedScene" uid="uid://eoq44uwtlaa8" path="res://player.tscn" id="2_78yo6"]
 [ext_resource type="Texture2D" uid="uid://dyv3oue2it5vf" path="res://Landscape/Trees/Tree 1.png" id="3_0e1sy"]
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://bdo5xw3bwl35n" path="res://other/Old house.png" id="3_nhoxq"]
 [ext_resource type="Texture2D" uid="uid://bj4n0epsqg6ju" path="res://other/BardHouse.png" id="4_h8tve"]
 [ext_resource type="Texture2D" uid="uid://qhpwjtlrx65g" path="res://Landscape/грядка паханая.png" id="4_m5hkw"]
 [ext_resource type="Texture2D" uid="uid://cy0lq0fi3la0k" path="res://Landscape/грядка.png" id="5_63xcn"]
 [ext_resource type="Script" path="res://other/Actionable.gd" id="5_dt410"]
 [ext_resource type="Texture2D" uid="uid://d216ktrlvbhq7" path="res://other/Alchemist house.png" id="5_qn05j"]
-=======
-[ext_resource type="Texture2D" uid="uid://i0sf62i6amxh" path="res://other/House1.png" id="3_7p6e1"]
-[ext_resource type="Texture2D" uid="uid://c4q6ujpgys3cc" path="res://other/House2.png" id="4_03t3r"]
-[ext_resource type="Texture2D" uid="uid://30j4w0jdvhrf" path="res://other/House3.png" id="5_5ub8e"]
-[ext_resource type="Script" path="res://other/Actionable.gd" id="5_dt410"]
->>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1
 [ext_resource type="Texture2D" uid="uid://cvfp1dp8gskjl" path="res://other/DryidHouse.png" id="6_2uhf5"]
 [ext_resource type="Resource" uid="uid://njij2plxigka" path="res://dialogues/druid.dialogue" id="6_8bobb"]
 [ext_resource type="Script" path="res://Dryid.gd" id="6_vtvjd"]
@@ -31,7 +20,6 @@
 [ext_resource type="Script" path="res://Dryidanim.gd" id="10_hm40t"]
 [ext_resource type="PackedScene" uid="uid://h12mc4mgh74p" path="res://inventory/inventory.tscn" id="11_ejwdm"]
 [ext_resource type="PackedScene" uid="uid://bh234t4c2xdk2" path="res://combat/combat_system.tscn" id="12_4wjr6"]
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://csk1ky43mh6in" path="res://character spite/NPC/Alchemist dog/собака.png" id="14_7m480"]
 [ext_resource type="Script" path="res://Alchemist dog.gd" id="14_r1lm7"]
 [ext_resource type="Texture2D" uid="uid://deagf4myh1diy" path="res://character spite/NPC/bard/бард.png" id="15_cxw15"]
@@ -54,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://c1bis4a3t7wyy" path="res://character spite/Bosses/Act 1 Bosss/босс первого акта анимация 2.png" id="29_3v25d"]
 [ext_resource type="Resource" uid="uid://cr0imipbrk1pt" path="res://dialogues/boss1.dialogue" id="33_la0cw"]
 [ext_resource type="Script" path="res://Scripts/sound_player.gd" id="37_5h55q"]
+[ext_resource type="PackedScene" uid="uid://dpb6o4syyvgfb" path="res://enemy_wolf.tscn" id="38_rpue3"]
 [ext_resource type="Texture2D" uid="uid://xouvmujgfeko" path="res://other/Бардская кровать.png" id="40_woaau"]
 [ext_resource type="Texture2D" uid="uid://ce0836yv152al" path="res://other/Бочка.png" id="41_cn38w"]
 [ext_resource type="Texture2D" uid="uid://by7oufor4se5i" path="res://other/Колодец.png" id="42_77tgg"]
@@ -64,8 +53,6 @@
 [ext_resource type="Texture2D" uid="uid://0isfg8luvivn" path="res://other/Забор перед.png" id="44_p2v20"]
 [ext_resource type="AudioStream" uid="uid://bbpevedx2gp13" path="res://audio/music/relaxation-music.mp3" id="45_dfvxr"]
 [ext_resource type="Resource" uid="uid://wy8nvaqe4b6" path="res://dialogues/Colodec.dialogue" id="45_tdrp2"]
-=======
->>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_skdfn"]
 radius = 35.0
@@ -399,6 +386,9 @@ position = Vector2(6015.1, 3734.6)
 scale = Vector2(2.84048, 3.12774)
 texture = ExtResource("6_2uhf5")
 
+[node name="PlayerBody" parent="." instance=ExtResource("2_78yo6")]
+position = Vector2(446, 18)
+
 [node name="Dryid" type="CharacterBody2D" parent="."]
 script = ExtResource("6_vtvjd")
 
@@ -421,7 +411,6 @@ visible = false
 script = ExtResource("5_dt410")
 dialogue_resource = ExtResource("6_8bobb")
 
-<<<<<<< HEAD
 [node name="DruidAction" type="CollisionShape2D" parent="Dryid/Actionable"]
 visible = false
 position = Vector2(5829, 4013)
@@ -524,16 +513,8 @@ dialogue_resource = ExtResource("33_la0cw")
 position = Vector2(8377, -2109)
 shape = SubResource("CapsuleShape2D_x630l")
 
-[node name="PlayerBody" parent="." instance=ExtResource("2_78yo6")]
-position = Vector2(8343, -242)
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dryid/Actionable"]
-position = Vector2(5829, 4013)
-shape = SubResource("CapsuleShape2D_w4ejp")
-
-[node name="Player" parent="." instance=ExtResource("2_78yo6")]
-position = Vector2(5404, 3450)
->>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1
+[node name="EnemyWolf" parent="." instance=ExtResource("38_rpue3")]
+position = Vector2(2542, 259)
 
 [node name="Tree 2" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -4083,7 +4064,6 @@ shape = SubResource("RectangleShape2D_0xn4h")
 [node name="KolodtcOllision" type="CollisionShape2D" parent="Objects"]
 visible = false
 position = Vector2(8472, 456)
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_6mgbv")
 
 [node name="Забор" type="Sprite2D" parent="Objects"]
@@ -4567,11 +4547,9 @@ scale = Vector2(0.938983, 1.06745)
 texture = ExtResource("44_p2v20")
 
 [node name="Inventory" parent="." instance=ExtResource("11_ejwdm")]
-visible = false
 
 [node name="CombatSystem" parent="." instance=ExtResource("12_4wjr6")]
 visible = false
-<<<<<<< HEAD
 
 [node name="StatsUI" parent="." instance=ExtResource("18_wvvsw")]
 position = Vector2(-2, 0)
@@ -4582,5 +4560,12 @@ script = ExtResource("37_5h55q")
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("45_dfvxr")
 autoplay = true
-=======
->>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1
+
+[node name="Marker2D" type="Marker2D" parent="." groups=["FirstEnemy"]]
+position = Vector2(2539, 256)
+
+[node name="Marker2D2" type="Marker2D" parent="." groups=["FirstEnemy"]]
+position = Vector2(2994, 71)
+
+[node name="Marker2D3" type="Marker2D" parent="." groups=["FirstEnemy"]]
+position = Vector2(3339, 0)
