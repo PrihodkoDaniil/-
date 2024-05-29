@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://20asb1p6a6qf"]
+
+[ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_f3psl"]
+[ext_resource type="Texture2D" uid="uid://cxchsydqu3m0x" path="res://character spite/NPC/down people/Нищий.png" id="2_yhfqa"]
+
+[resource]
+script = ExtResource("1_f3psl")
+name = "Нищая"
+health = 80
+texture = ExtResource("2_yhfqa")
+damage = 25

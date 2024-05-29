@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://1em1din7u6nu"]
+
+[ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_yyhwn"]
+[ext_resource type="Texture2D" uid="uid://bn2b37jj27tex" path="res://character spite/NPC/shopwoman/Торговка down.png" id="2_prm1f"]
+
+[resource]
+script = ExtResource("1_yyhwn")
+name = "Мэриэль"
+health = 150
+texture = ExtResource("2_prm1f")
+damage = 30

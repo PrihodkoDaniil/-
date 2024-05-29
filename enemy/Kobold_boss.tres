@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://dsrbgqtl7scm0"]
+
+[ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_m67kd"]
+[ext_resource type="Texture2D" uid="uid://ikpuajmash5m" path="res://character spite/Bosses/Act 2 Bosses/Kobold warrior/Босс ящеров.png" id="2_lj7mr"]
+
+[resource]
+script = ExtResource("1_m67kd")
+name = "Большой кобольд"
+health = 60
+texture = ExtResource("2_lj7mr")
+damage = 15

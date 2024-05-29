@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://dsu5rgefepmbb"]
+
+[ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_x8xrt"]
+[ext_resource type="Texture2D" uid="uid://kipsfiwjho4r" path="res://character spite/NPC/biblio worker/Рекламщик.png" id="2_pbli2"]
+
+[resource]
+script = ExtResource("1_x8xrt")
+name = "Джаналетт"
+health = 85
+texture = ExtResource("2_pbli2")
+damage = 26

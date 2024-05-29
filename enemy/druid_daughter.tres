@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://bgpaoxpawl7qt"]
+
+[ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_eniqd"]
+[ext_resource type="Texture2D" uid="uid://bhy76bbkf1vko" path="res://character spite/NPC/dryid daughter/Дочь друида down.png" id="2_1cuc7"]
+
+[resource]
+script = ExtResource("1_eniqd")
+name = "Каэлинн"
+health = 70
+texture = ExtResource("2_1cuc7")
+damage = 15

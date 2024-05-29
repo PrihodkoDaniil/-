@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://db21saq5ngr7i"]
+
+[ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_csdps"]
+[ext_resource type="Texture2D" uid="uid://vn8om41763yv" path="res://character spite/Bosses/Act 3/guadian 2 f.png" id="2_sooxd"]
+
+[resource]
+script = ExtResource("1_csdps")
+name = "Биба"
+health = 90
+texture = ExtResource("2_sooxd")
+damage = 21

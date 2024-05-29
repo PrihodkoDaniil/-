@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://r2usj3msf7ug"]
+
+[ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_e4veq"]
+[ext_resource type="Texture2D" uid="uid://wb4u3khnuc6f" path="res://character spite/NPC/village npc/fisherman.png" id="2_5hn0u"]
+
+[resource]
+script = ExtResource("1_e4veq")
+name = "Карм"
+health = 65
+texture = ExtResource("2_5hn0u")
+damage = 20

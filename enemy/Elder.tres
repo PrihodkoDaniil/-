@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_wmt4q")
 name = "Староста"
-health = 75
+health = 55
 texture = ExtResource("2_efulj")
 damage = 10

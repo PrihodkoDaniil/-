@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://pqciohrb3vtv"]
+
+[ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_d88g3"]
+[ext_resource type="Texture2D" uid="uid://bi11g8vh5xesa" path="res://sprites/enemy_sprites/Slime/BlueSlime_Idle.png" id="2_4dd1n"]
+
+[resource]
+script = ExtResource("1_d88g3")
+name = "Слайм"
+health = 10
+texture = ExtResource("2_4dd1n")
+damage = 1

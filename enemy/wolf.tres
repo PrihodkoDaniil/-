@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://ciia01ruh2ebt"]
 
 [ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_0ehbp"]
-[ext_resource type="Texture2D" uid="uid://ff8ihyowhk3f" path="res://sprites/enemy_sprites/wolf.png" id="2_ulban"]
+[ext_resource type="Texture2D" uid="uid://pyqd8sn3gbyw" path="res://sprites/enemy_sprites/Wolf/Wolf_Idle.png" id="2_ct50r"]
 
 [resource]
 script = ExtResource("1_0ehbp")
 name = "Волк"
 health = 15
-texture = ExtResource("2_ulban")
+texture = ExtResource("2_ct50r")
 damage = 5

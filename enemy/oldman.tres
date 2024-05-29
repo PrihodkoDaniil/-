@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://cnlfs3ndg6y7l"]
+
+[ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_f60qr"]
+[ext_resource type="Texture2D" uid="uid://bsxteff7m3o67" path="res://character spite/NPC/village npc/Oldman.png" id="2_ct8lt"]
+
+[resource]
+script = ExtResource("1_f60qr")
+name = "Гальвин"
+health = 45
+texture = ExtResource("2_ct8lt")
+damage = 5

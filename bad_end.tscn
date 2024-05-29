@@ -1,0 +1,90 @@
+[gd_scene load_steps=10 format=3 uid="uid://cl65ej5ert6ki"]
+
+[ext_resource type="Texture2D" uid="uid://bbpjt6tsjyp12" path="res://Landscape/Nothing.png" id="1_uysis"]
+[ext_resource type="Texture2D" uid="uid://dch56iepna22t" path="res://Landscape/тюрьма.png" id="2_ldwos"]
+[ext_resource type="Script" path="res://PLayer_bad.gd" id="3_v231k"]
+[ext_resource type="Texture2D" uid="uid://c4yxpivbayji3" path="res://sprites/character sprites/вперед1фрейм.png" id="4_1pm41"]
+[ext_resource type="Texture2D" uid="uid://07h2kwkcacws" path="res://character spite/player_basoka/вперед1фрейм UP.png" id="5_d5wxq"]
+[ext_resource type="Texture2D" uid="uid://b35elwa2uhm4y" path="res://character spite/player_basoka/вперед1фрейм DOWN.png" id="6_p2ok8"]
+[ext_resource type="Texture2D" uid="uid://c6yh4eaoi2bdp" path="res://other/решетка.png" id="7_sag7n"]
+[ext_resource type="Texture2D" uid="uid://idt7c0tjk3dv" path="res://other/туалет.png" id="8_jg6tw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2xtlf"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("4_1pm41")
+}, {
+"duration": 3.0,
+"texture": ExtResource("5_d5wxq")
+}, {
+"duration": 3.0,
+"texture": ExtResource("6_p2ok8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Bad_END" type="Node2D"]
+
+[node name="Nothing" type="Sprite2D" parent="."]
+texture = ExtResource("1_uysis")
+
+[node name="Prison" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Prison"]
+texture_filter = 1
+texture = ExtResource("2_ldwos")
+
+[node name="PLayer_bad" type="CharacterBody2D" parent="Prison"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("3_v231k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Prison/PLayer_bad"]
+texture_filter = 1
+position = Vector2(-8, 14)
+sprite_frames = SubResource("SpriteFrames_2xtlf")
+animation = &"idle"
+frame_progress = 0.523831
+
+[node name="Sprite2D2" type="Sprite2D" parent="Prison"]
+texture_filter = 1
+position = Vector2(-31.8125, -12.5)
+scale = Vector2(0.344565, 0.572222)
+texture = ExtResource("7_sag7n")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Prison"]
+position = Vector2(40, -27)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("8_jg6tw")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Prison"]
+texture_filter = 1
+position = Vector2(20, -12.5)
+scale = Vector2(0.344565, 0.572222)
+texture = ExtResource("7_sag7n")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Prison"]
+texture_filter = 1
+position = Vector2(81.8125, -12.5)
+scale = Vector2(0.344565, 0.572222)
+texture = ExtResource("7_sag7n")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Prison"]
+texture_filter = 1
+position = Vector2(133.625, -12.5)
+scale = Vector2(0.344565, 0.572222)
+texture = ExtResource("7_sag7n")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Prison"]
+texture_filter = 1
+position = Vector2(-140.188, -12.5)
+scale = Vector2(0.344565, 0.572222)
+texture = ExtResource("7_sag7n")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Prison"]
+texture_filter = 1
+position = Vector2(-88.375, -12.5)
+scale = Vector2(0.344565, 0.572222)
+texture = ExtResource("7_sag7n")

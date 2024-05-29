@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://b5tnl5mf4x5cq"]
+
+[ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_cefuw"]
+[ext_resource type="Texture2D" uid="uid://ct6cislv3280o" path="res://character spite/NPC/shopman/Торговец down.png" id="2_nyxj1"]
+
+[resource]
+script = ExtResource("1_cefuw")
+name = "Бейро"
+health = 60
+texture = ExtResource("2_nyxj1")
+damage = 14

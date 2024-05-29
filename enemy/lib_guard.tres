@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://dcrsc1e8qhr8q"]
+
+[ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_kbffq"]
+[ext_resource type="Texture2D" uid="uid://djakk2q7kpnni" path="res://character spite/NPC/bibleoguardian/Охрана.png" id="2_rke26"]
+
+[resource]
+script = ExtResource("1_kbffq")
+name = "Стражник библиотеки"
+health = 125
+texture = ExtResource("2_rke26")
+damage = 35

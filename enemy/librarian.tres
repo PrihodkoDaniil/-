@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://cpw1lkv5negcw"]
+
+[ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_momia"]
+[ext_resource type="Texture2D" uid="uid://p05gfpld5uur" path="res://character spite/NPC/bibleotekar/Библиотекарь.png" id="2_l2qxr"]
+
+[resource]
+script = ExtResource("1_momia")
+name = "Бетринна"
+health = 201
+texture = ExtResource("2_l2qxr")
+damage = 45

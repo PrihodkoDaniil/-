@@ -8,4 +8,4 @@ script = ExtResource("1_ifvfe")
 name = "Бард"
 health = 25
 texture = ExtResource("2_7bkug")
-damage = 5
+damage = 6

@@ -1,0 +1,222 @@
+[gd_scene load_steps=28 format=3 uid="uid://btev0jyn3uef4"]
+
+[ext_resource type="Texture2D" uid="uid://bbpjt6tsjyp12" path="res://Landscape/Nothing.png" id="1_lghae"]
+[ext_resource type="Script" path="res://main2.gd" id="1_pj5wq"]
+[ext_resource type="Texture2D" uid="uid://vo3ihgdionq5" path="res://Landscape/death pole.png" id="2_xdpaw"]
+[ext_resource type="Texture2D" uid="uid://bprp6ddv3jfls" path="res://Landscape/death pole house.png" id="3_qxdrn"]
+[ext_resource type="Texture2D" uid="uid://c46qv7o5w8jqd" path="res://other/Особняк.png" id="4_wl5yc"]
+[ext_resource type="Texture2D" uid="uid://o604qg15yrum" path="res://Landscape/Тропа.png" id="5_a482e"]
+[ext_resource type="Texture2D" uid="uid://cbgbi4dp4f76u" path="res://Landscape/Шахта.png" id="6_dmg28"]
+[ext_resource type="Texture2D" uid="uid://conc5r6k0vou1" path="res://Landscape/Dragon cave.png" id="7_alvbx"]
+[ext_resource type="Texture2D" uid="uid://dfjins5yhv17h" path="res://Landscape/Cavemine wall.png" id="8_dalce"]
+[ext_resource type="Texture2D" uid="uid://ddni7oeycjgg0" path="res://other/Golden.png" id="9_j6kih"]
+[ext_resource type="Texture2D" uid="uid://beot3lw3rbcyk" path="res://other/Вход в шахты.png" id="10_r1i0o"]
+[ext_resource type="Texture2D" uid="uid://ce0836yv152al" path="res://other/Бочка.png" id="11_ntlea"]
+[ext_resource type="PackedScene" uid="uid://dpp2ejfjys7s7" path="res://dragon.tscn" id="11_nvn3o"]
+[ext_resource type="Texture2D" uid="uid://dewqkcuwmne5h" path="res://other/ящик.png" id="12_4rcj3"]
+[ext_resource type="PackedScene" uid="uid://c5jv5cjctc3mo" path="res://kobold.tscn" id="12_34mqc"]
+[ext_resource type="PackedScene" uid="uid://cju1j8hlf06s5" path="res://kobold_boss.tscn" id="13_ci4j8"]
+[ext_resource type="Texture2D" uid="uid://cjldh622fd8tl" path="res://sprites/Skelet.png" id="14_csi0j"]
+[ext_resource type="PackedScene" uid="uid://eoq44uwtlaa8" path="res://player.tscn" id="15_3lfnk"]
+[ext_resource type="PackedScene" uid="uid://bh234t4c2xdk2" path="res://combat/combat_system.tscn" id="18_oouke"]
+[ext_resource type="Script" path="res://other/Actionable.gd" id="19_bqeqb"]
+[ext_resource type="PackedScene" uid="uid://b0w5p20erjn8y" path="res://StatsUI/stats.tscn" id="19_mmvdu"]
+[ext_resource type="PackedScene" uid="uid://h12mc4mgh74p" path="res://inventory/inventory.tscn" id="20_ccmyt"]
+[ext_resource type="Resource" uid="uid://djcr3eal3td03" path="res://dialogues/skelet.dialogue" id="20_fegr1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0sdfx"]
+radius = 28.0
+height = 82.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5t8ya"]
+size = Vector2(64, 64)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1u3kc"]
+radius = 21.0
+height = 70.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yixpq"]
+radius = 67.0075
+
+[node name="Act 2" type="Node2D"]
+script = ExtResource("1_pj5wq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Nothing" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(104, -87)
+scale = Vector2(20, 20)
+texture = ExtResource("1_lghae")
+
+[node name="land" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+position = Vector2(960, 540)
+texture = ExtResource("2_xdpaw")
+
+[node name="houseland" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(2563, 540)
+texture = ExtResource("3_qxdrn")
+
+[node name="House" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+position = Vector2(2078, 1)
+scale = Vector2(2.34007, 2.65656)
+texture = ExtResource("4_wl5yc")
+
+[node name="Path" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(2934, -249)
+texture = ExtResource("5_a482e")
+
+[node name="Mine" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(3636, -699)
+texture = ExtResource("6_dmg28")
+
+[node name="Dragon Cave" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(5086, -685)
+texture = ExtResource("7_alvbx")
+
+[node name="CaveWall" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+position = Vector2(3624, -1865)
+scale = Vector2(7, 7)
+texture = ExtResource("8_dalce")
+
+[node name="CaveWall2" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+position = Vector2(1674, -1462)
+scale = Vector2(7, 7)
+texture = ExtResource("8_dalce")
+
+[node name="CaveWall3" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+position = Vector2(5586, -2147)
+scale = Vector2(7, 7)
+texture = ExtResource("8_dalce")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+position = Vector2(5317, -1070.56)
+scale = Vector2(4.50413, 4.20833)
+texture = ExtResource("9_j6kih")
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+position = Vector2(5351, -327)
+scale = Vector2(4.50413, 4.20833)
+texture = ExtResource("9_j6kih")
+
+[node name="CaveWall4" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+position = Vector2(6590, -268)
+scale = Vector2(7, 7)
+texture = ExtResource("8_dalce")
+
+[node name="bochka" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1538, 326)
+scale = Vector2(0.11, 0.118)
+texture = ExtResource("11_ntlea")
+
+[node name="bochka2" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1702, 353)
+scale = Vector2(0.11, 0.118)
+texture = ExtResource("11_ntlea")
+
+[node name="Ящик" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(2573, 352)
+scale = Vector2(0.498387, 0.348404)
+texture = ExtResource("12_4rcj3")
+
+[node name="Map" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+polygon = PackedVector2Array(0, 0, 608, 0, 1654, -2, 2789, -4, 2903, -2, 2903, -94, 2867, -94, 2866, -498, 608, -483, 2694, -497, 2688, -897, 4641, -900, 4639, -1176, 5552, -1179, 5547, -183, 4590, -187, 4588, -501, 3003, -501, 3001, -96, 2971, -96, 2973, -1, 3206, 5, 3209, 1087, -3, 1084, 0, 0, -6, 0, -29, 1081, -7, 1119, 3239, 1117, 3237, -1, 5747, -1, 5659, -1273, 4515, -1301, 2635, -947, 585, -639, 567, -295, 2783, -293, 2765, -75, -7, -39)
+
+[node name="House2" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(-202, -110)
+polygon = PackedVector2Array(1756, -6, 1769, 470, 2791, 470, 2807, -14)
+
+[node name="gold2" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(0, 1)
+polygon = PackedVector2Array(5085, -188, 5106, -231, 5184, -297, 5210, -343, 5282, -415, 5325, -478, 5353, -495, 5414, -494, 5471, -490, 5552, -497, 5579, -493, 5587, -182)
+
+[node name="gold1" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+polygon = PackedVector2Array(5055, -931, 5080, -915, 5547, -915, 5550, -1187, 5247, -1186, 5095, -1002)
+
+[node name="bochkaCOl" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(1533, 326)
+shape = SubResource("CapsuleShape2D_0sdfx")
+
+[node name="bochkaCOl2" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(1697, 353)
+shape = SubResource("CapsuleShape2D_0sdfx")
+
+[node name="bochkaCOl3" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(2577, 352)
+shape = SubResource("RectangleShape2D_5t8ya")
+
+[node name="Player" parent="." instance=ExtResource("15_3lfnk")]
+position = Vector2(505, 41)
+
+[node name="startMine" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2945, -86)
+scale = Vector2(1.82237, 2.02222)
+texture = ExtResource("10_r1i0o")
+
+[node name="Dragon" parent="." instance=ExtResource("11_nvn3o")]
+texture_filter = 1
+position = Vector2(5139, -794)
+scale = Vector2(1.94, 1.94)
+
+[node name="Kobold" parent="." instance=ExtResource("12_34mqc")]
+position = Vector2(3032, 947)
+scale = Vector2(0.445, 0.445)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Kobold_boss" parent="." instance=ExtResource("13_ci4j8")]
+position = Vector2(2048, 471)
+scale = Vector2(0.72, 0.72)
+
+[node name="Skelet" type="CharacterBody2D" parent="."]
+position = Vector2(3602, -833)
+
+[node name="Sprite2D" type="Sprite2D" parent="Skelet"]
+texture_filter = 1
+scale = Vector2(1.425, 1.57955)
+texture = ExtResource("14_csi0j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skelet"]
+visible = false
+shape = SubResource("CapsuleShape2D_1u3kc")
+
+[node name="Area2D" type="Area2D" parent="Skelet"]
+visible = false
+script = ExtResource("19_bqeqb")
+dialogue_resource = ExtResource("20_fegr1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skelet/Area2D"]
+visible = false
+shape = SubResource("CircleShape2D_yixpq")
+
+[node name="CombatSystem" parent="." instance=ExtResource("18_oouke")]
+visible = false
+
+[node name="StatsUI" parent="." instance=ExtResource("19_mmvdu")]
+
+[node name="Inventory" parent="." instance=ExtResource("20_ccmyt")]
+position = Vector2(505, 41)
+
+[node name="Marker2D" type="Marker2D" parent="." groups=["FourEnemy"]]
+position = Vector2(3037, 951)
+
+[node name="Marker2D2" type="Marker2D" parent="." groups=["FourEnemy"]]
+position = Vector2(2249, 951)
+
+[node name="Marker2D3" type="Marker2D" parent="." groups=["FourEnemy"]]
+position = Vector2(1432, 951)

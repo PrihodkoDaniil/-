@@ -1,0 +1,784 @@
+[gd_scene load_steps=84 format=3 uid="uid://y5bb5x3868mn"]
+
+[ext_resource type="Texture2D" uid="uid://tc3ukam47rp" path="res://Landscape/bridge.png" id="1_epx1b"]
+[ext_resource type="Texture2D" uid="uid://dktj3mrgqmnum" path="res://other/Стена дома.png" id="2_b2cfm"]
+[ext_resource type="Texture2D" uid="uid://b6tw4xqcn1qng" path="res://other/крыши домов.png" id="3_q8dbt"]
+[ext_resource type="Texture2D" uid="uid://dbthhmnnjbvxe" path="res://other/Торогвый ларек снаряжения.png" id="4_7ro8k"]
+[ext_resource type="Texture2D" uid="uid://d4gw2dlljwvqv" path="res://Landscape/lug.png" id="5_di18o"]
+[ext_resource type="Texture2D" uid="uid://b66idty8vg34q" path="res://other/Column up.png" id="6_y2r1q"]
+[ext_resource type="Texture2D" uid="uid://dyv3oue2it5vf" path="res://Landscape/Trees/Tree 1.png" id="7_vc6yr"]
+[ext_resource type="Script" path="res://Oldman.gd" id="8_rvkhl"]
+[ext_resource type="Texture2D" uid="uid://br02dmkd7adfw" path="res://character spite/NPC/shopwoman/Торговка.png" id="9_nca2g"]
+[ext_resource type="Texture2D" uid="uid://blle3sinxjl0o" path="res://character spite/NPC/shopwoman/Торговка up.png" id="10_e7th4"]
+[ext_resource type="Texture2D" uid="uid://bn2b37jj27tex" path="res://character spite/NPC/shopwoman/Торговка down.png" id="11_aldqn"]
+[ext_resource type="Script" path="res://other/Actionable.gd" id="12_ky22t"]
+[ext_resource type="Resource" uid="uid://wtui0ymmndvv" path="res://dialogues/elf.dialogue" id="13_yq8af"]
+[ext_resource type="Texture2D" uid="uid://csreaq1teldgm" path="res://other/Торогвый ларек.png" id="14_i7iiy"]
+[ext_resource type="Texture2D" uid="uid://ix6iwur4v6mu" path="res://character spite/NPC/shopman/Торговец.png" id="15_45kwd"]
+[ext_resource type="Texture2D" uid="uid://oq7ym1h2psbr" path="res://character spite/NPC/shopman/Торговец up.png" id="16_uwurv"]
+[ext_resource type="Texture2D" uid="uid://ct6cislv3280o" path="res://character spite/NPC/shopman/Торговец down.png" id="17_2w4pl"]
+[ext_resource type="Resource" uid="uid://cyjfa0yx3shvk" path="res://dialogues/shopman.dialogue" id="18_7l5ny"]
+[ext_resource type="Script" path="res://Fontain.gd" id="19_11nxh"]
+[ext_resource type="Texture2D" uid="uid://b6meq232cmskq" path="res://other/фонтан/Фонтан1.png" id="20_6ni5p"]
+[ext_resource type="Texture2D" uid="uid://diq4dw0ey625r" path="res://other/фонтан/Фонтан2.png" id="21_5rtkc"]
+[ext_resource type="Texture2D" uid="uid://7py7nidr1wtw" path="res://other/фонтан/Фонтан3.png" id="22_kdta6"]
+[ext_resource type="Texture2D" uid="uid://bij0q62oqgdbn" path="res://other/фонтан/Фонтан4.png" id="23_pphkc"]
+[ext_resource type="Texture2D" uid="uid://c6dw3updohaee" path="res://other/фонтан/Фонтан5.png" id="24_yvlu3"]
+[ext_resource type="Texture2D" uid="uid://ddq2vjvnm5ofn" path="res://other/фонтан/Фонтан6.png" id="25_cf4al"]
+[ext_resource type="Resource" uid="uid://wccfv84igt8g" path="res://dialogues/fontain.dialogue" id="26_a5771"]
+[ext_resource type="Script" path="res://PLayer_bad.gd" id="27_eigwj"]
+[ext_resource type="Texture2D" uid="uid://c4yxpivbayji3" path="res://sprites/character sprites/вперед1фрейм.png" id="28_hj6pm"]
+[ext_resource type="Texture2D" uid="uid://07h2kwkcacws" path="res://character spite/player_basoka/вперед1фрейм UP.png" id="29_1ivg8"]
+[ext_resource type="Texture2D" uid="uid://b35elwa2uhm4y" path="res://character spite/player_basoka/вперед1фрейм DOWN.png" id="30_0gb1i"]
+[ext_resource type="Texture2D" uid="uid://bsxteff7m3o67" path="res://character spite/NPC/village npc/Oldman.png" id="31_g5vor"]
+[ext_resource type="Texture2D" uid="uid://b33kgqkn3rlhs" path="res://character spite/NPC/village npc/Oldman up.png" id="32_o417m"]
+[ext_resource type="Texture2D" uid="uid://bl8lihcu3ldsn" path="res://character spite/NPC/village npc/Oldman down.png" id="33_lghqi"]
+[ext_resource type="Resource" uid="uid://cbpedpepa7ppv" path="res://dialogues/oldman.dialogue" id="34_blysv"]
+[ext_resource type="Script" path="res://Girl.gd" id="35_unnyu"]
+[ext_resource type="Texture2D" uid="uid://cofgcpbx6tf5j" path="res://character spite/NPC/village npc/Girl down.png" id="36_74jkx"]
+[ext_resource type="Texture2D" uid="uid://btxy0nkg3cc03" path="res://character spite/NPC/village npc/Girl up.png" id="37_f7g6s"]
+[ext_resource type="Texture2D" uid="uid://cc1tre8ouq3p" path="res://character spite/NPC/village npc/Girl.png" id="38_vkmoj"]
+[ext_resource type="Resource" uid="uid://p8vbwk2qw6j0" path="res://dialogues/girl.dialogue" id="39_ppcok"]
+[ext_resource type="Texture2D" uid="uid://bypxlux757axe" path="res://character spite/NPC/dryid daughter/Дочь друида.png" id="40_66n8k"]
+[ext_resource type="Texture2D" uid="uid://6toccjgq0r5" path="res://character spite/NPC/dryid daughter/Дочь друида up.png" id="41_28hsw"]
+[ext_resource type="Texture2D" uid="uid://bhy76bbkf1vko" path="res://character spite/NPC/dryid daughter/Дочь друида down.png" id="42_dykvi"]
+[ext_resource type="Resource" uid="uid://bm44uy35wk7m8" path="res://dialogues/druid_daughter.dialogue" id="43_m3nrf"]
+[ext_resource type="Script" path="res://Dryid.gd" id="44_vsk3b"]
+[ext_resource type="Texture2D" uid="uid://b6ykx8m8kuno5" path="res://character spite/NPC/Dryid/друид2.png" id="45_gtagt"]
+[ext_resource type="Texture2D" uid="uid://6ab81ffafyni" path="res://character spite/NPC/Dryid/друидвдох.png" id="46_yawtt"]
+[ext_resource type="Texture2D" uid="uid://civgo1ctgwc7f" path="res://character spite/NPC/Dryid/друидвыдох.png" id="47_xo27h"]
+[ext_resource type="Script" path="res://Dryidanim.gd" id="48_e80ms"]
+[ext_resource type="Resource" uid="uid://njij2plxigka" path="res://dialogues/druid.dialogue" id="49_jp4e7"]
+[ext_resource type="Script" path="res://Bard.gd" id="50_4vcjl"]
+[ext_resource type="Texture2D" uid="uid://deagf4myh1diy" path="res://character spite/NPC/bard/бард.png" id="51_sym6r"]
+[ext_resource type="Texture2D" uid="uid://dksxixre2s7qm" path="res://character spite/NPC/bard/бард вдох.png" id="52_hr25r"]
+[ext_resource type="Texture2D" uid="uid://chqqhw2a8iel8" path="res://character spite/NPC/bard/бард выдох.png" id="53_33urp"]
+[ext_resource type="Resource" uid="uid://2xj07pbduxq3" path="res://dialogues/bard.dialogue" id="54_hafde"]
+[ext_resource type="Script" path="res://Elder.gd" id="55_m003n"]
+[ext_resource type="Texture2D" uid="uid://dd1h0yeekwb2o" path="res://character spite/NPC/Elder/бабка.png" id="56_oa84o"]
+[ext_resource type="Texture2D" uid="uid://b430x04dg8ko5" path="res://character spite/NPC/Elder/бабка вдох.png" id="57_egb4p"]
+[ext_resource type="Texture2D" uid="uid://dlukky1uhuok2" path="res://character spite/NPC/Elder/бабка выдох.png" id="58_ek8nc"]
+[ext_resource type="Resource" uid="uid://1yjf8ybt2oa3" path="res://dialogues/elder.dialogue" id="59_pv6ng"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mpd7a"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("20_6ni5p")
+}, {
+"duration": 2.0,
+"texture": ExtResource("21_5rtkc")
+}, {
+"duration": 2.0,
+"texture": ExtResource("22_kdta6")
+}, {
+"duration": 2.0,
+"texture": ExtResource("23_pphkc")
+}, {
+"duration": 2.0,
+"texture": ExtResource("24_yvlu3")
+}, {
+"duration": 2.0,
+"texture": ExtResource("25_cf4al")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ws5lq"]
+radius = 123.0
+height = 404.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qmykt"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("9_nca2g")
+}, {
+"duration": 3.0,
+"texture": ExtResource("10_e7th4")
+}, {
+"duration": 3.0,
+"texture": ExtResource("11_aldqn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ewia"]
+radius = 30.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ncw2k"]
+radius = 13.3333
+height = 46.6666
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5knqs"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("15_45kwd")
+}, {
+"duration": 3.0,
+"texture": ExtResource("16_uwurv")
+}, {
+"duration": 3.0,
+"texture": ExtResource("17_2w4pl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cjalt"]
+radius = 35.0176
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cm3vc"]
+radius = 14.4443
+height = 40.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bnnq5"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("28_hj6pm")
+}, {
+"duration": 3.0,
+"texture": ExtResource("29_1ivg8")
+}, {
+"duration": 3.0,
+"texture": ExtResource("30_0gb1i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jdddt"]
+radius = 17.0
+height = 47.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fjdxx"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("31_g5vor")
+}, {
+"duration": 3.0,
+"texture": ExtResource("32_o417m")
+}, {
+"duration": 3.0,
+"texture": ExtResource("33_lghqi")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kdtit"]
+radius = 17.5
+height = 49.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6ncwi"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("36_74jkx")
+}, {
+"duration": 3.0,
+"texture": ExtResource("37_f7g6s")
+}, {
+"duration": 3.0,
+"texture": ExtResource("38_vkmoj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2pxa7"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("40_66n8k")
+}, {
+"duration": 3.0,
+"texture": ExtResource("41_28hsw")
+}, {
+"duration": 3.0,
+"texture": ExtResource("42_dykvi")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gylk7"]
+radius = 60.0083
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_soqtp"]
+radius = 27.0
+height = 82.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4rc3c"]
+radius = 35.0
+height = 86.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ijqrx"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("45_gtagt")
+}, {
+"duration": 3.0,
+"texture": ExtResource("46_yawtt")
+}, {
+"duration": 3.0,
+"texture": ExtResource("47_xo27h")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4jds6"]
+radius = 61.0
+height = 122.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5dxdx"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("51_sym6r")
+}, {
+"duration": 3.0,
+"texture": ExtResource("52_hr25r")
+}, {
+"duration": 3.0,
+"texture": ExtResource("53_33urp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnvuw"]
+radius = 61.0
+height = 122.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hn311"]
+radius = 89.0
+height = 178.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2g0ld"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("56_oa84o")
+}, {
+"duration": 3.0,
+"texture": ExtResource("57_egb4p")
+}, {
+"duration": 3.0,
+"texture": ExtResource("58_ek8nc")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3irht"]
+radius = 85.0
+height = 176.0
+
+[node name="Good_END" type="Node2D"]
+
+[node name="v_Down2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-106, 586)
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("1_epx1b")
+
+[node name="Area" type="StaticBody2D" parent="."]
+
+[node name="H_Down8" type="Sprite2D" parent="Area"]
+texture_filter = 1
+position = Vector2(585.5, 1024.5)
+rotation = 3.14159
+scale = Vector2(3, 3)
+texture = ExtResource("1_epx1b")
+
+[node name="H_Down16" type="Sprite2D" parent="Area"]
+texture_filter = 1
+position = Vector2(585.5, 724.5)
+scale = Vector2(3, 3)
+texture = ExtResource("1_epx1b")
+
+[node name="H_Down17" type="Sprite2D" parent="Area"]
+texture_filter = 1
+position = Vector2(1714, 725)
+scale = Vector2(3, 3)
+texture = ExtResource("1_epx1b")
+
+[node name="H_Down13" type="Sprite2D" parent="Area"]
+texture_filter = 1
+position = Vector2(585.5, 449.5)
+scale = Vector2(3, 3)
+texture = ExtResource("1_epx1b")
+
+[node name="H_Down14" type="Sprite2D" parent="Area"]
+texture_filter = 1
+position = Vector2(1714, 450)
+scale = Vector2(3, 3)
+texture = ExtResource("1_epx1b")
+
+[node name="H_Down7" type="Sprite2D" parent="Area"]
+texture_filter = 1
+position = Vector2(585.5, 172.5)
+scale = Vector2(3, 3)
+texture = ExtResource("1_epx1b")
+
+[node name="H_Down10" type="Sprite2D" parent="Area"]
+texture_filter = 1
+position = Vector2(1717, 1026)
+rotation = 3.14159
+scale = Vector2(3, 3)
+texture = ExtResource("1_epx1b")
+
+[node name="H_Down9" type="Sprite2D" parent="Area/H_Down10"]
+texture_filter = 1
+position = Vector2(5495, -976)
+scale = Vector2(3, 3)
+texture = ExtResource("1_epx1b")
+
+[node name="H_Down9" type="Sprite2D" parent="Area"]
+texture_filter = 1
+position = Vector2(1714, 172.5)
+scale = Vector2(3, 3)
+texture = ExtResource("1_epx1b")
+
+[node name="Houses" type="StaticBody2D" parent="."]
+
+[node name="wall2" type="Sprite2D" parent="Houses"]
+texture_filter = 1
+position = Vector2(-89.7505, -10.2499)
+scale = Vector2(3, 3)
+texture = ExtResource("2_b2cfm")
+
+[node name="house14" type="Sprite2D" parent="Houses"]
+texture_filter = 1
+position = Vector2(-92.7502, -203.25)
+scale = Vector2(2.80508, 2.60811)
+texture = ExtResource("3_q8dbt")
+
+[node name="wall4" type="Sprite2D" parent="Houses"]
+texture_filter = 1
+position = Vector2(947.25, -10.2499)
+scale = Vector2(3, 3)
+texture = ExtResource("2_b2cfm")
+
+[node name="wall5" type="Sprite2D" parent="Houses"]
+texture_filter = 1
+position = Vector2(460, -10.2499)
+scale = Vector2(3, 3)
+texture = ExtResource("2_b2cfm")
+
+[node name="house16" type="Sprite2D" parent="Houses"]
+texture_filter = 1
+position = Vector2(944.251, -203.25)
+scale = Vector2(2.80508, 2.60811)
+texture = ExtResource("3_q8dbt")
+
+[node name="house15" type="Sprite2D" parent="Houses"]
+texture_filter = 1
+position = Vector2(447.251, -203.25)
+scale = Vector2(2.80508, 2.60811)
+texture = ExtResource("3_q8dbt")
+
+[node name="Shop arm" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(343, 21.0001)
+scale = Vector2(0.694712, 0.672222)
+texture = ExtResource("4_7ro8k")
+
+[node name="house2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1149, 1018)
+scale = Vector2(3, 3)
+texture = ExtResource("3_q8dbt")
+
+[node name="house3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(318, 1020)
+scale = Vector2(3, 3)
+texture = ExtResource("3_q8dbt")
+
+[node name="shop null" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1131.5, 21)
+scale = Vector2(0.694712, 0.672222)
+texture = ExtResource("14_i7iiy")
+
+[node name="Tree" type="StaticBody2D" parent="."]
+position = Vector2(-1054, 933)
+
+[node name="Ground" type="Sprite2D" parent="Tree"]
+texture_filter = 1
+position = Vector2(1784, 88)
+scale = Vector2(0.02, 0.036)
+texture = ExtResource("5_di18o")
+
+[node name="Column up" type="Sprite2D" parent="Tree"]
+texture_filter = 1
+position = Vector2(1783, 57)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_y2r1q")
+
+[node name="Column up6" type="Sprite2D" parent="Tree"]
+texture_filter = 1
+position = Vector2(1784.75, 115.3)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_y2r1q")
+
+[node name="Column up7" type="Sprite2D" parent="Tree"]
+texture_filter = 1
+position = Vector2(1814.25, 86)
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_y2r1q")
+
+[node name="Column up8" type="Sprite2D" parent="Tree"]
+texture_filter = 1
+position = Vector2(1752.75, 86.3)
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_y2r1q")
+
+[node name="Tree2" type="Sprite2D" parent="Tree"]
+texture_filter = 1
+position = Vector2(1781, 6)
+scale = Vector2(2, 2)
+texture = ExtResource("7_vc6yr")
+
+[node name="Tree2" type="StaticBody2D" parent="."]
+position = Vector2(-1093, 21)
+
+[node name="Ground" type="Sprite2D" parent="Tree2"]
+texture_filter = 1
+position = Vector2(1784, 88)
+scale = Vector2(0.02, 0.036)
+texture = ExtResource("5_di18o")
+
+[node name="Column up" type="Sprite2D" parent="Tree2"]
+texture_filter = 1
+position = Vector2(1783, 57)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_y2r1q")
+
+[node name="Column up6" type="Sprite2D" parent="Tree2"]
+texture_filter = 1
+position = Vector2(1784.75, 115.3)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_y2r1q")
+
+[node name="Column up7" type="Sprite2D" parent="Tree2"]
+texture_filter = 1
+position = Vector2(1814.25, 86)
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_y2r1q")
+
+[node name="Column up8" type="Sprite2D" parent="Tree2"]
+texture_filter = 1
+position = Vector2(1752.75, 86.3)
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_y2r1q")
+
+[node name="Tree2" type="Sprite2D" parent="Tree2"]
+texture_filter = 1
+position = Vector2(1781, 6)
+scale = Vector2(2, 2)
+texture = ExtResource("7_vc6yr")
+
+[node name="Tree3" type="StaticBody2D" parent="."]
+position = Vector2(-1780, 21)
+
+[node name="Ground" type="Sprite2D" parent="Tree3"]
+texture_filter = 1
+position = Vector2(1784, 88)
+scale = Vector2(0.02, 0.036)
+texture = ExtResource("5_di18o")
+
+[node name="Column up" type="Sprite2D" parent="Tree3"]
+texture_filter = 1
+position = Vector2(1783, 57)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_y2r1q")
+
+[node name="Column up6" type="Sprite2D" parent="Tree3"]
+texture_filter = 1
+position = Vector2(1784.75, 115.3)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_y2r1q")
+
+[node name="Column up7" type="Sprite2D" parent="Tree3"]
+texture_filter = 1
+position = Vector2(1814.25, 86)
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_y2r1q")
+
+[node name="Column up8" type="Sprite2D" parent="Tree3"]
+texture_filter = 1
+position = Vector2(1752.75, 86.3)
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_y2r1q")
+
+[node name="Tree2" type="Sprite2D" parent="Tree3"]
+texture_filter = 1
+position = Vector2(1781, 6)
+scale = Vector2(2, 2)
+texture = ExtResource("7_vc6yr")
+
+[node name="Fontain" type="CharacterBody2D" parent="."]
+position = Vector2(-2853, 196)
+script = ExtResource("19_11nxh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Fontain"]
+texture_filter = 1
+position = Vector2(3565, 232)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_mpd7a")
+animation = &"idle"
+speed_scale = 2.5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Fontain"]
+visible = false
+polygon = PackedVector2Array(3400, 282, 3400, 323, 3405, 323, 3406, 347, 3423, 346, 3423, 371, 3476, 372, 3476, 380, 3640, 380, 3662, 379, 3664, 368, 3688, 367, 3688, 355, 3706, 356, 3707, 337, 3722, 337, 3721, 318, 3729, 318, 3728, 261, 3708, 261, 3709, 229, 3698, 230, 3697, 215, 3689, 216, 3686, 204, 3673, 205, 3672, 191, 3659, 191, 3657, 183, 3641, 184, 3640, 176, 3625, 176, 3625, 164, 3507, 165, 3506, 173, 3489, 172, 3488, 181, 3470, 182, 3468, 194, 3457, 194, 3456, 202, 3445, 202, 3445, 212, 3437, 212, 3436, 224, 3427, 225, 3425, 265, 3411, 265, 3410, 281)
+
+[node name="Area2D" type="Area2D" parent="Fontain"]
+visible = false
+script = ExtResource("12_ky22t")
+dialogue_resource = ExtResource("26_a5771")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fontain/Area2D"]
+visible = false
+position = Vector2(3561, 282)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_ws5lq")
+
+[node name="Characters" type="StaticBody2D" parent="."]
+
+[node name="shopwoman" type="CharacterBody2D" parent="Characters"]
+position = Vector2(517, 129)
+scale = Vector2(1.8, 1.8)
+script = ExtResource("8_rvkhl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Characters/shopwoman"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_qmykt")
+animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="Characters/shopwoman"]
+visible = false
+script = ExtResource("12_ky22t")
+dialogue_resource = ExtResource("13_yq8af")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/shopwoman/Area2D"]
+shape = SubResource("CircleShape2D_2ewia")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Characters/shopwoman"]
+visible = false
+position = Vector2(0, 2.22222)
+shape = SubResource("CapsuleShape2D_ncw2k")
+
+[node name="shopman" type="CharacterBody2D" parent="Characters"]
+position = Vector2(1267.5, 131)
+scale = Vector2(1.8, 1.8)
+script = ExtResource("8_rvkhl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Characters/shopman"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_5knqs")
+animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="Characters/shopman"]
+visible = false
+script = ExtResource("12_ky22t")
+dialogue_resource = ExtResource("18_7l5ny")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/shopman/Area2D"]
+shape = SubResource("CircleShape2D_cjalt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Characters/shopman"]
+visible = false
+position = Vector2(-1.66667, 4.44444)
+shape = SubResource("CapsuleShape2D_cm3vc")
+
+[node name="PLayer_Good" type="CharacterBody2D" parent="Characters"]
+position = Vector2(717, 602)
+scale = Vector2(1.8, 1.8)
+script = ExtResource("27_eigwj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Characters/PLayer_Good"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_bnnq5")
+animation = &"idle"
+
+[node name="Oldman" type="CharacterBody2D" parent="Characters"]
+texture_filter = 1
+position = Vector2(584, 1098)
+scale = Vector2(2, 2)
+script = ExtResource("8_rvkhl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/Oldman"]
+visible = false
+position = Vector2(126.5, -134.5)
+shape = SubResource("CapsuleShape2D_jdddt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Characters/Oldman"]
+position = Vector2(126.5, -134.5)
+scale = Vector2(1.01515, 1)
+sprite_frames = SubResource("SpriteFrames_fjdxx")
+animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="Characters/Oldman"]
+visible = false
+position = Vector2(-12.5, -614)
+script = ExtResource("12_ky22t")
+dialogue_resource = ExtResource("34_blysv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/Oldman/Area2D"]
+position = Vector2(140.5, 480.5)
+shape = SubResource("CapsuleShape2D_kdtit")
+
+[node name="Girl" type="CharacterBody2D" parent="Characters"]
+texture_filter = 1
+position = Vector2(259, -462)
+scale = Vector2(2, 2)
+script = ExtResource("35_unnyu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Characters/Girl"]
+position = Vector2(140.5, 480.5)
+scale = Vector2(1.01973, 0.988372)
+sprite_frames = SubResource("SpriteFrames_6ncwi")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/Girl"]
+visible = false
+position = Vector2(140.5, 480.5)
+shape = SubResource("CapsuleShape2D_kdtit")
+
+[node name="Area2D" type="Area2D" parent="Characters/Girl"]
+visible = false
+script = ExtResource("12_ky22t")
+dialogue_resource = ExtResource("39_ppcok")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/Girl/Area2D"]
+position = Vector2(140.5, 480.5)
+shape = SubResource("CapsuleShape2D_kdtit")
+
+[node name="dryid_daughter" type="CharacterBody2D" parent="Characters"]
+position = Vector2(895, 499)
+script = ExtResource("8_rvkhl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Characters/dryid_daughter"]
+texture_filter = 1
+scale = Vector2(1.8, 1.8)
+sprite_frames = SubResource("SpriteFrames_2pxa7")
+animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="Characters/dryid_daughter"]
+visible = false
+script = ExtResource("12_ky22t")
+dialogue_resource = ExtResource("43_m3nrf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/dryid_daughter/Area2D"]
+visible = false
+shape = SubResource("CircleShape2D_gylk7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/dryid_daughter"]
+visible = false
+position = Vector2(-3, 4)
+shape = SubResource("CapsuleShape2D_soqtp")
+
+[node name="Dryid" type="CharacterBody2D" parent="Characters"]
+position = Vector2(-4867, -3502)
+script = ExtResource("44_vsk3b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/Dryid"]
+visible = false
+position = Vector2(5830, 4006)
+shape = SubResource("CapsuleShape2D_4rc3c")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Characters/Dryid"]
+texture_filter = 1
+position = Vector2(5830, 4004)
+scale = Vector2(1.60417, 1.66327)
+sprite_frames = SubResource("SpriteFrames_ijqrx")
+animation = &"idle"
+script = ExtResource("48_e80ms")
+
+[node name="Actionable" type="Area2D" parent="Characters/Dryid"]
+visible = false
+script = ExtResource("12_ky22t")
+dialogue_resource = ExtResource("49_jp4e7")
+
+[node name="DruidAction" type="CollisionShape2D" parent="Characters/Dryid/Actionable"]
+visible = false
+position = Vector2(5829, 4013)
+shape = SubResource("CapsuleShape2D_4jds6")
+
+[node name="Bard" type="CharacterBody2D" parent="Characters"]
+position = Vector2(-8636, -647)
+script = ExtResource("50_4vcjl")
+
+[node name="BardSprite" type="AnimatedSprite2D" parent="Characters/Bard"]
+texture_filter = 1
+position = Vector2(9232, 887)
+scale = Vector2(1.97727, 2.02551)
+sprite_frames = SubResource("SpriteFrames_5dxdx")
+animation = &"idle"
+
+[node name="BardCol" type="CollisionShape2D" parent="Characters/Bard"]
+visible = false
+position = Vector2(9231, 889)
+shape = SubResource("CapsuleShape2D_lnvuw")
+
+[node name="Action" type="Area2D" parent="Characters/Bard"]
+visible = false
+script = ExtResource("12_ky22t")
+dialogue_resource = ExtResource("54_hafde")
+
+[node name="BardAction" type="CollisionShape2D" parent="Characters/Bard/Action"]
+position = Vector2(9229, 886)
+shape = SubResource("CapsuleShape2D_hn311")
+
+[node name="Elder" type="CharacterBody2D" parent="Characters"]
+position = Vector2(-7578, 728)
+script = ExtResource("55_m003n")
+
+[node name="ElderSprite" type="AnimatedSprite2D" parent="Characters/Elder"]
+texture_filter = 1
+position = Vector2(8488, 87)
+scale = Vector2(2.0393, 2.00765)
+sprite_frames = SubResource("SpriteFrames_2g0ld")
+animation = &"Idle"
+
+[node name="ElderCol" type="CollisionShape2D" parent="Characters/Elder"]
+visible = false
+position = Vector2(8491, 88)
+shape = SubResource("CapsuleShape2D_lnvuw")
+
+[node name="Action" type="Area2D" parent="Characters/Elder"]
+visible = false
+script = ExtResource("12_ky22t")
+dialogue_resource = ExtResource("59_pv6ng")
+
+[node name="ElderAction" type="CollisionShape2D" parent="Characters/Elder/Action"]
+position = Vector2(8490, 90)
+shape = SubResource("CapsuleShape2D_3irht")

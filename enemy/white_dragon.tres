@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_enemy" load_steps=3 format=3 uid="uid://hpvl34t5xefy"]
+
+[ext_resource type="Script" path="res://resources/base_enemy.gd" id="1_qgb5j"]
+[ext_resource type="Texture2D" uid="uid://poytf8ftf6hn" path="res://character spite/Bosses/Act 2 Bosses/Dragon/Дракон.png" id="2_mtruw"]
+
+[resource]
+script = ExtResource("1_qgb5j")
+name = "Белый дракон"
+health = 100
+texture = ExtResource("2_mtruw")
+damage = 20
