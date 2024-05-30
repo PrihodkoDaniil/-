@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dewqkcuwmne5h"
-path="res://.godot/imported/ящик.png-d31a70786af270376472bea08a0ab524.ctex"
+uid="uid://ck38fm04hlcbb"
+path="res://.godot/imported/Барный стол.png-ef351a9a40103299c3ba7d2118a2b126.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://other/ящик.png"
-dest_files=["res://.godot/imported/ящик.png-d31a70786af270376472bea08a0ab524.ctex"]
+source_file="res://other/Барный стол.png"
+dest_files=["res://.godot/imported/Барный стол.png-ef351a9a40103299c3ba7d2118a2b126.ctex"]
 
 [params]
 

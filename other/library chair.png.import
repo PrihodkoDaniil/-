@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dewqkcuwmne5h"
-path="res://.godot/imported/ящик.png-d31a70786af270376472bea08a0ab524.ctex"
+uid="uid://b4mfpnprnda0y"
+path="res://.godot/imported/library chair.png-272047a724db0961aacc4b275f721517.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://other/ящик.png"
-dest_files=["res://.godot/imported/ящик.png-d31a70786af270376472bea08a0ab524.ctex"]
+source_file="res://other/library chair.png"
+dest_files=["res://.godot/imported/library chair.png-272047a724db0961aacc4b275f721517.ctex"]
 
 [params]
 

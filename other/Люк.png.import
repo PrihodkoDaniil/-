@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dewqkcuwmne5h"
-path="res://.godot/imported/ящик.png-d31a70786af270376472bea08a0ab524.ctex"
+uid="uid://cfc4qaei6406b"
+path="res://.godot/imported/Люк.png-93232ce30e9ac9ac53d02b87b2175990.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://other/ящик.png"
-dest_files=["res://.godot/imported/ящик.png-d31a70786af270376472bea08a0ab524.ctex"]
+source_file="res://other/Люк.png"
+dest_files=["res://.godot/imported/Люк.png-93232ce30e9ac9ac53d02b87b2175990.ctex"]
 
 [params]
 

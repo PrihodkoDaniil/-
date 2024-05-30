@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dewqkcuwmne5h"
-path="res://.godot/imported/ящик.png-d31a70786af270376472bea08a0ab524.ctex"
+uid="uid://d0tiqbgaavpj"
+path="res://.godot/imported/Вход в шахты тьма.png-a86dca8c71878d6ec85ae8d76a28bbdb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://other/ящик.png"
-dest_files=["res://.godot/imported/ящик.png-d31a70786af270376472bea08a0ab524.ctex"]
+source_file="res://other/Вход в шахты тьма.png"
+dest_files=["res://.godot/imported/Вход в шахты тьма.png-a86dca8c71878d6ec85ae8d76a28bbdb.ctex"]
 
 [params]
 

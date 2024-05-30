@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dewqkcuwmne5h"
-path="res://.godot/imported/ящик.png-d31a70786af270376472bea08a0ab524.ctex"
+uid="uid://b6tw4xqcn1qng"
+path="res://.godot/imported/крыши домов.png-d4f12f607b0ae91dfd3d08d3fa9bcaae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://other/ящик.png"
-dest_files=["res://.godot/imported/ящик.png-d31a70786af270376472bea08a0ab524.ctex"]
+source_file="res://other/крыши домов.png"
+dest_files=["res://.godot/imported/крыши домов.png-d4f12f607b0ae91dfd3d08d3fa9bcaae.ctex"]
 
 [params]
 

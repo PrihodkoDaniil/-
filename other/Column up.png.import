@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dewqkcuwmne5h"
-path="res://.godot/imported/ящик.png-d31a70786af270376472bea08a0ab524.ctex"
+uid="uid://b66idty8vg34q"
+path="res://.godot/imported/Column up.png-caf809aa4d8879be39b240c0c117ca4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://other/ящик.png"
-dest_files=["res://.godot/imported/ящик.png-d31a70786af270376472bea08a0ab524.ctex"]
+source_file="res://other/Column up.png"
+dest_files=["res://.godot/imported/Column up.png-caf809aa4d8879be39b240c0c117ca4b.ctex"]
 
 [params]
 

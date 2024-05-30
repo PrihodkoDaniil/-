@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dewqkcuwmne5h"
-path="res://.godot/imported/ящик.png-d31a70786af270376472bea08a0ab524.ctex"
+uid="uid://dktj3mrgqmnum"
+path="res://.godot/imported/Стена дома.png-201d126a059f20693f2d3828a248c560.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://other/ящик.png"
-dest_files=["res://.godot/imported/ящик.png-d31a70786af270376472bea08a0ab524.ctex"]
+source_file="res://other/Стена дома.png"
+dest_files=["res://.godot/imported/Стена дома.png-201d126a059f20693f2d3828a248c560.ctex"]
 
 [params]
 
