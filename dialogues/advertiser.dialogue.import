@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://brhsbgfqsm0gs"
+path="res://.godot/imported/advertiser.dialogue-d4c237d436e4e4392578b80ab53179f6.tres"
+
+[deps]
+
+source_file="res://dialogues/advertiser.dialogue"
+dest_files=["res://.godot/imported/advertiser.dialogue-d4c237d436e4e4392578b80ab53179f6.tres"]
+
+[params]
+
+defaults=true

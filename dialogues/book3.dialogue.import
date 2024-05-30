@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cox2uac6el2oh"
+path="res://.godot/imported/book3.dialogue-a1f7097921567bfd4a2891cfa38d8f37.tres"
+
+[deps]
+
+source_file="res://dialogues/book3.dialogue"
+dest_files=["res://.godot/imported/book3.dialogue-a1f7097921567bfd4a2891cfa38d8f37.tres"]
+
+[params]
+
+defaults=true

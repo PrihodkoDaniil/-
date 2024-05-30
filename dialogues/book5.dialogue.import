@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bg4b6kq3y3cey"
+path="res://.godot/imported/book5.dialogue-a3233c0a255c011469c4e0841382fded.tres"
+
+[deps]
+
+source_file="res://dialogues/book5.dialogue"
+dest_files=["res://.godot/imported/book5.dialogue-a3233c0a255c011469c4e0841382fded.tres"]
+
+[params]
+
+defaults=true

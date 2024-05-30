@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dvraejkwjtd7h"
+path="res://.godot/imported/boss_2act_dragon.dialogue-f7b07687327415ba3d9740bbd01bb2ac.tres"
+
+[deps]
+
+source_file="res://dialogues/boss_2act_dragon.dialogue"
+dest_files=["res://.godot/imported/boss_2act_dragon.dialogue-f7b07687327415ba3d9740bbd01bb2ac.tres"]
+
+[params]
+
+defaults=true

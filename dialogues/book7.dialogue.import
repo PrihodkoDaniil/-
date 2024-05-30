@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dray7mysllpwp"
+path="res://.godot/imported/book7.dialogue-f4cf658d2dbb2f1c3732b0647b558e05.tres"
+
+[deps]
+
+source_file="res://dialogues/book7.dialogue"
+dest_files=["res://.godot/imported/book7.dialogue-f4cf658d2dbb2f1c3732b0647b558e05.tres"]
+
+[params]
+
+defaults=true
