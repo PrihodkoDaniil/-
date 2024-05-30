@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://bpjudd5bx0c0c"]
+
+[ext_resource type="Script" path="res://enemy/enemy_raven.gd" id="1_1hgvo"]
+[ext_resource type="Texture2D" uid="uid://bcebrtdfb3tos" path="res://sprites/enemy_sprites/Raven/raven1.png" id="1_3d5wr"]
+[ext_resource type="Texture2D" uid="uid://b4yrgh4faku5i" path="res://sprites/enemy_sprites/Raven/raven2.png" id="2_fvugn"]
+[ext_resource type="Texture2D" uid="uid://b08ytytvyi76s" path="res://sprites/enemy_sprites/Raven/raven4.png" id="3_io1x2"]
+[ext_resource type="Texture2D" uid="uid://bq02kcf154rd1" path="res://sprites/enemy_sprites/Raven/raven3.png" id="4_wg8nd"]
+[ext_resource type="PackedScene" uid="uid://drejjyi7a4m6d" path="res://ai/wander.tscn" id="5_rswqu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hoa4g"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("1_3d5wr")
+}, {
+"duration": 0.5,
+"texture": ExtResource("2_fvugn")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_io1x2")
+}, {
+"duration": 0.5,
+"texture": ExtResource("2_fvugn")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_wg8nd")
+}],
+"loop": true,
+"name": &"Move",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8wxw"]
+size = Vector2(40, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iyf1j"]
+radius = 10.4077
+
+[node name="EnemyRaven" type="CharacterBody2D" node_paths=PackedStringArray("wander_direction")]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_1hgvo")
+wander_direction = NodePath("Wander")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2.5, 2.345)
+sprite_frames = SubResource("SpriteFrames_hoa4g")
+animation = &"Move"
+frame_progress = 0.38985
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_f8wxw")
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(2.5, 2.5)
+shape = SubResource("CircleShape2D_iyf1j")
+
+[node name="Wander" parent="." instance=ExtResource("5_rswqu")]
+group_name = "ThirdEnemy"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

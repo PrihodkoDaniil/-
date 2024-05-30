@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://gdnpwlrl00ks"]
+
+[ext_resource type="Texture2D" uid="uid://dkt8i63vledv0" path="res://character spite/Bosses/Act 3/guadian idle.png" id="1_rytfp"]
+[ext_resource type="Script" path="res://guardians_boss.gd" id="1_w7mm4"]
+[ext_resource type="Texture2D" uid="uid://dad2y2id54dr" path="res://character spite/Bosses/Act 3/guadian idle up.png" id="2_55kxq"]
+[ext_resource type="Texture2D" uid="uid://bdhyb61rfkxb" path="res://character spite/Bosses/Act 3/guadian idle down.png" id="3_l4hoa"]
+[ext_resource type="Script" path="res://other/Actionable.gd" id="5_k0qpr"]
+[ext_resource type="Resource" uid="uid://c5jxdlbk6hbco" path="res://dialogues/guard1.dialogue" id="6_s4ywi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fqmcw"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("1_rytfp")
+}, {
+"duration": 3.0,
+"texture": ExtResource("2_55kxq")
+}, {
+"duration": 3.0,
+"texture": ExtResource("3_l4hoa")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0haj8"]
+radius = 15.0
+height = 164.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ebl7b"]
+radius = 37.0
+height = 166.0
+
+[node name="Guardians_Boss" type="CharacterBody2D"]
+script = ExtResource("1_w7mm4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_fqmcw")
+animation = &"idle"
+frame_progress = 0.511428
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CapsuleShape2D_0haj8")
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+script = ExtResource("5_k0qpr")
+dialogue_resource = ExtResource("6_s4ywi")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_ebl7b")

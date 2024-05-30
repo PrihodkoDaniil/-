@@ -1,4 +1,4 @@
-[gd_scene load_steps=158 format=3 uid="uid://cdy6d7t66ligh"]
+[gd_scene load_steps=153 format=3 uid="uid://cdy6d7t66ligh"]
 
 [ext_resource type="Texture2D" uid="uid://bbpjt6tsjyp12" path="res://Landscape/Nothing.png" id="1_etodk"]
 [ext_resource type="Script" path="res://main4.gd" id="1_maxd0"]
@@ -66,7 +66,6 @@
 [ext_resource type="Texture2D" uid="uid://ckwfwq234w44y" path="res://other/books.png" id="37_potue"]
 [ext_resource type="Texture2D" uid="uid://cmh00fciw8lak" path="res://other/books2.png" id="38_eaqeo"]
 [ext_resource type="Resource" uid="uid://brhsbgfqsm0gs" path="res://dialogues/advertiser.dialogue" id="38_frt8k"]
-[ext_resource type="Resource" uid="uid://dhc0oki307qee" path="res://dialogues/richag.dialogue" id="39_7xxdv"]
 [ext_resource type="Script" path="res://soul_torch1.gd" id="39_wxblg"]
 [ext_resource type="Texture2D" uid="uid://babi64h3xhq8n" path="res://other/soul totch/candel.png" id="40_ot6yh"]
 [ext_resource type="Texture2D" uid="uid://br07dn7lfyii2" path="res://other/soul totch/Torch (1).png" id="41_n8wg6"]
@@ -100,8 +99,6 @@
 [ext_resource type="Texture2D" uid="uid://0n6rhehhwa2h" path="res://character spite/NPC/Mer/Мэр.png" id="77_uw8fs"]
 [ext_resource type="Texture2D" uid="uid://ogo1xqqrfgds" path="res://character spite/NPC/Mer/Мэр2.png" id="78_nsrgc"]
 [ext_resource type="Texture2D" uid="uid://d1h5ebsod2v34" path="res://character spite/NPC/Mer/Мэр1.png" id="79_2a53c"]
-[ext_resource type="Script" path="res://MerPath.gd" id="79_n6v0l"]
-[ext_resource type="Script" path="res://ending.gd" id="83_smlc6"]
 [ext_resource type="Texture2D" uid="uid://cp0sxfcwa6fit" path="res://Landscape/exit act 3.png" id="99_80xmi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_txyaf"]
@@ -186,12 +183,8 @@ radius = 51.788
 [sub_resource type="CircleShape2D" id="CircleShape2D_e35sn"]
 radius = 56.0089
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ancqt"]
-radius = 15.0
-height = 50.0
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_ercrf"]
-radius = 39.1152
+radius = 23.0217
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bgqmw"]
 animations = [{
@@ -336,9 +329,12 @@ height = 46.6666
 
 [sub_resource type="Curve2D" id="Curve2D_qfg2u"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 68.333, 0, 0, 0, 0, 6.11133, -65.5555, 0, 0, 0, 0, -97.2217, -66.6667, 0, 0, 0, 0, -97.7773, -33.3333)
+"points": PackedVector2Array(0, 0, 0, 0, 0.555664, 69.4444, 0, 0, 0, 0, -1.11035, -86.6667, 0, 0, 0, 0, -107.777, -87.2222)
 }
-point_count = 4
+point_count = 3
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ge1v"]
+radius = 31.1153
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_el325"]
 animations = [{
@@ -371,16 +367,16 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 3.0,
 "texture": ExtResource("50_t6p10")
 }, {
-"duration": 1.0,
+"duration": 3.0,
 "texture": ExtResource("71_8ls8p")
 }, {
-"duration": 1.0,
+"duration": 3.0,
 "texture": ExtResource("72_dm4nm")
 }, {
-"duration": 1.0,
+"duration": 3.0,
 "texture": ExtResource("71_8ls8p")
 }],
 "loop": true,
@@ -405,18 +401,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rbdqa"]
-radius = 15.5547
-height = 42.2229
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_2ys6j"]
 radius = 127.018
-
-[sub_resource type="Curve2D" id="Curve2D_ge44g"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -1150, -275, 0, 0, 0, 0, -1149, -75, 0, 0, 0, 0, -662, -79)
-}
-point_count = 3
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3murx"]
 animations = [{
@@ -443,12 +429,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oj1hs"]
-radius = 12.7783
-height = 42.2222
+[sub_resource type="CircleShape2D" id="CircleShape2D_k37x6"]
+radius = 41.8478
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_r8gjp"]
-radius = 31.7886
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uu7gh"]
+radius = 13.3333
+height = 48.8889
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f2by8"]
 animations = [{
@@ -1286,25 +1272,14 @@ dialogue_resource = ExtResource("37_ck3pt")
 position = Vector2(63, -93)
 shape = SubResource("CircleShape2D_e35sn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Library"]
-visible = false
-position = Vector2(16269, 936)
-rotation = -1.57079
-shape = SubResource("CapsuleShape2D_ancqt")
-
 [node name="FinlaMassage" type="Sprite2D" parent="Library"]
 texture_filter = 1
 position = Vector2(16276, 914)
 texture = ExtResource("30_pfs3q")
 
-[node name="Area2D" type="Area2D" parent="Library"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Library"]
 visible = false
-position = Vector2(16276, 914)
-script = ExtResource("18_r2kev")
-dialogue_resource = ExtResource("39_7xxdv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Library/Area2D"]
-position = Vector2(-8, 16)
+position = Vector2(16268, 930)
 shape = SubResource("CircleShape2D_ercrf")
 
 [node name="beggar" type="CharacterBody2D" parent="."]
@@ -1449,7 +1424,7 @@ scale = Vector2(1.8, 1.8)
 curve = SubResource("Curve2D_qfg2u")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(0, 68.333)
+position = Vector2(0.555664, 69.4444)
 rotation = -1.5708
 rotates = false
 cubic_interp = false
@@ -1461,16 +1436,16 @@ position = Vector2(-1.66669, -0.555664)
 rotation = 1.5708
 script = ExtResource("65_j4xjp")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/lib_guardian"]
+visible = false
+shape = SubResource("CircleShape2D_2ge1v")
+
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/lib_guardian"]
 position = Vector2(1.11035, -1.67072)
 rotation = -0.0070374
 sprite_frames = SubResource("SpriteFrames_el325")
-animation = &"up"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/lib_guardian"]
-visible = false
-position = Vector2(0, 1.11145)
-shape = SubResource("CapsuleShape2D_rbdqa")
+animation = &"down"
+frame_progress = 0.395177
 
 [node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D/lib_guardian"]
 visible = false
@@ -1480,39 +1455,24 @@ dialogue_resource = ExtResource("65_vyjes")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/lib_guardian/Area2D"]
 shape = SubResource("CircleShape2D_2ys6j")
 
-[node name="MerPath" type="Path2D" parent="."]
-position = Vector2(16530, 1021)
-curve = SubResource("Curve2D_ge44g")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="MerPath"]
-position = Vector2(-1150, -275)
-rotation = -0.00821337
-rotates = false
-cubic_interp = false
-loop = false
-
-[node name="Mer" type="CharacterBody2D" parent="MerPath/PathFollow2D"]
-position = Vector2(11, 0.0903268)
-rotation = 0.00821337
+[node name="Mer" type="CharacterBody2D" parent="."]
+position = Vector2(478, 36)
 scale = Vector2(1.8, 1.8)
-script = ExtResource("79_n6v0l")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MerPath/PathFollow2D/Mer"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mer"]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_3murx")
 animation = &"idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MerPath/PathFollow2D/Mer"]
+[node name="Area2D" type="Area2D" parent="Mer"]
 visible = false
-position = Vector2(-2.87445e-10, 0.555556)
-shape = SubResource("CapsuleShape2D_oj1hs")
 
-[node name="Area2D" type="Area2D" parent="MerPath/PathFollow2D/Mer"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mer/Area2D"]
+shape = SubResource("CircleShape2D_k37x6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Mer"]
 visible = false
-script = ExtResource("83_smlc6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MerPath/PathFollow2D/Mer/Area2D"]
-shape = SubResource("CircleShape2D_r8gjp")
+shape = SubResource("CapsuleShape2D_uu7gh")
 
 [node name="Player" parent="." instance=ExtResource("10_7b45e")]
 position = Vector2(599, -175)
@@ -2194,12 +2154,10 @@ scale = Vector2(11.4167, 10.2222)
 texture = ExtResource("36_fl05e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gates"]
-visible = false
 position = Vector2(15381, 1164)
 shape = SubResource("RectangleShape2D_urtyh")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Gates"]
-visible = false
 position = Vector2(15381, 764)
 shape = SubResource("RectangleShape2D_urtyh")
 

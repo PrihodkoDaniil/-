@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=3 uid="uid://dpp2ejfjys7s7"]
+
+[ext_resource type="Script" path="res://enemy/boss_2act_dragon.gd" id="1_4gi4b"]
+[ext_resource type="Texture2D" uid="uid://poytf8ftf6hn" path="res://character spite/Bosses/Act 2 Bosses/Dragon/Дракон.png" id="1_u2fi7"]
+[ext_resource type="Texture2D" uid="uid://foy7ld8tr865" path="res://character spite/Bosses/Act 2 Bosses/Dragon/Дракон движение 2.png" id="2_3n1oo"]
+[ext_resource type="Texture2D" uid="uid://dh1shmk43gx8m" path="res://character spite/Bosses/Act 2 Bosses/Dragon/Дракон движение.png" id="3_lshby"]
+[ext_resource type="Script" path="res://other/Actionable.gd" id="5_nvuau"]
+[ext_resource type="Resource" uid="uid://dvraejkwjtd7h" path="res://dialogues/boss_2act_dragon.dialogue" id="6_0bc7s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_80xdm"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("1_u2fi7")
+}, {
+"duration": 3.0,
+"texture": ExtResource("2_3n1oo")
+}, {
+"duration": 3.0,
+"texture": ExtResource("1_u2fi7")
+}, {
+"duration": 3.0,
+"texture": ExtResource("3_lshby")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3bob0"]
+radius = 116.0
+height = 232.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tnyuv"]
+radius = 155.003
+
+[node name="Dragon" type="CharacterBody2D"]
+script = ExtResource("1_4gi4b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(49.25, 52.75)
+scale = Vector2(1.82773, 1.8719)
+sprite_frames = SubResource("SpriteFrames_80xdm")
+animation = &"Idle"
+frame_progress = 0.946419
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(49, 55)
+shape = SubResource("CapsuleShape2D_3bob0")
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+script = ExtResource("5_nvuau")
+dialogue_resource = ExtResource("6_0bc7s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(49, 55)
+shape = SubResource("CircleShape2D_tnyuv")

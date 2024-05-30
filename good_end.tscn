@@ -1,6 +1,8 @@
-[gd_scene load_steps=84 format=3 uid="uid://y5bb5x3868mn"]
+[gd_scene load_steps=86 format=3 uid="uid://y5bb5x3868mn"]
 
+[ext_resource type="Script" path="res://good_end.gd" id="1_2l7vb"]
 [ext_resource type="Texture2D" uid="uid://tc3ukam47rp" path="res://Landscape/bridge.png" id="1_epx1b"]
+[ext_resource type="Texture2D" uid="uid://bbpjt6tsjyp12" path="res://Landscape/Nothing.png" id="1_y7kc8"]
 [ext_resource type="Texture2D" uid="uid://dktj3mrgqmnum" path="res://other/Стена дома.png" id="2_b2cfm"]
 [ext_resource type="Texture2D" uid="uid://b6tw4xqcn1qng" path="res://other/крыши домов.png" id="3_q8dbt"]
 [ext_resource type="Texture2D" uid="uid://dbthhmnnjbvxe" path="res://other/Торогвый ларек снаряжения.png" id="4_7ro8k"]
@@ -293,6 +295,11 @@ radius = 85.0
 height = 176.0
 
 [node name="Good_END" type="Node2D"]
+script = ExtResource("1_2l7vb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(100, 100)
+texture = ExtResource("1_y7kc8")
 
 [node name="v_Down2" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -626,12 +633,13 @@ script = ExtResource("27_eigwj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Characters/PLayer_Good"]
 texture_filter = 1
+position = Vector2(-7.22222, 0)
 sprite_frames = SubResource("SpriteFrames_bnnq5")
 animation = &"idle"
 
 [node name="Oldman" type="CharacterBody2D" parent="Characters"]
 texture_filter = 1
-position = Vector2(584, 1098)
+position = Vector2(-22, 573)
 scale = Vector2(2, 2)
 script = ExtResource("8_rvkhl")
 
@@ -759,7 +767,7 @@ position = Vector2(9229, 886)
 shape = SubResource("CapsuleShape2D_hn311")
 
 [node name="Elder" type="CharacterBody2D" parent="Characters"]
-position = Vector2(-7578, 728)
+position = Vector2(-8194, 210)
 script = ExtResource("55_m003n")
 
 [node name="ElderSprite" type="AnimatedSprite2D" parent="Characters/Elder"]
@@ -782,3 +790,6 @@ dialogue_resource = ExtResource("59_pv6ng")
 [node name="ElderAction" type="CollisionShape2D" parent="Characters/Elder/Action"]
 position = Vector2(8490, 90)
 shape = SubResource("CapsuleShape2D_3irht")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(704, 456)

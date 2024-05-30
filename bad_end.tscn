@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://cl65ej5ert6ki"]
+[gd_scene load_steps=11 format=3 uid="uid://cl65ej5ert6ki"]
 
+[ext_resource type="Script" path="res://bad_end.gd" id="1_1426x"]
 [ext_resource type="Texture2D" uid="uid://bbpjt6tsjyp12" path="res://Landscape/Nothing.png" id="1_uysis"]
 [ext_resource type="Texture2D" uid="uid://dch56iepna22t" path="res://Landscape/тюрьма.png" id="2_ldwos"]
 [ext_resource type="Script" path="res://PLayer_bad.gd" id="3_v231k"]
@@ -27,8 +28,12 @@ animations = [{
 }]
 
 [node name="Bad_END" type="Node2D"]
+position = Vector2(597, 500)
+script = ExtResource("1_1426x")
 
 [node name="Nothing" type="Sprite2D" parent="."]
+position = Vector2(-12, 0)
+scale = Vector2(1.503, 1.171)
 texture = ExtResource("1_uysis")
 
 [node name="Prison" type="StaticBody2D" parent="."]
@@ -37,54 +42,64 @@ texture = ExtResource("1_uysis")
 texture_filter = 1
 texture = ExtResource("2_ldwos")
 
+[node name="Sprite2D" type="Sprite2D" parent="Prison/Sprite2D"]
+texture_filter = 1
+position = Vector2(0, -76)
+texture = ExtResource("2_ldwos")
+
+[node name="Sprite2D" type="Sprite2D" parent="Prison/Sprite2D/Sprite2D"]
+texture_filter = 1
+position = Vector2(93, 0)
+texture = ExtResource("2_ldwos")
+
+[node name="Sprite2D" type="Sprite2D" parent="Prison/Sprite2D/Sprite2D/Sprite2D"]
+texture_filter = 1
+position = Vector2(0, 76)
+texture = ExtResource("2_ldwos")
+
 [node name="PLayer_bad" type="CharacterBody2D" parent="Prison"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_v231k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Prison/PLayer_bad"]
 texture_filter = 1
-position = Vector2(-8, 14)
+position = Vector2(92, -26)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_2xtlf")
 animation = &"idle"
 frame_progress = 0.523831
 
-[node name="Sprite2D2" type="Sprite2D" parent="Prison"]
-texture_filter = 1
-position = Vector2(-31.8125, -12.5)
-scale = Vector2(0.344565, 0.572222)
-texture = ExtResource("7_sag7n")
-
 [node name="Sprite2D3" type="Sprite2D" parent="Prison"]
-position = Vector2(40, -27)
-scale = Vector2(0.05, 0.05)
+position = Vector2(-13.0001, -91)
+scale = Vector2(0.09, 0.09)
 texture = ExtResource("8_jg6tw")
-
-[node name="Sprite2D4" type="Sprite2D" parent="Prison"]
-texture_filter = 1
-position = Vector2(20, -12.5)
-scale = Vector2(0.344565, 0.572222)
-texture = ExtResource("7_sag7n")
-
-[node name="Sprite2D5" type="Sprite2D" parent="Prison"]
-texture_filter = 1
-position = Vector2(81.8125, -12.5)
-scale = Vector2(0.344565, 0.572222)
-texture = ExtResource("7_sag7n")
-
-[node name="Sprite2D6" type="Sprite2D" parent="Prison"]
-texture_filter = 1
-position = Vector2(133.625, -12.5)
-scale = Vector2(0.344565, 0.572222)
-texture = ExtResource("7_sag7n")
 
 [node name="Sprite2D7" type="Sprite2D" parent="Prison"]
 texture_filter = 1
-position = Vector2(-140.188, -12.5)
-scale = Vector2(0.344565, 0.572222)
+position = Vector2(-161.188, -51.5)
+scale = Vector2(0.709778, 1.00556)
 texture = ExtResource("7_sag7n")
 
 [node name="Sprite2D8" type="Sprite2D" parent="Prison"]
 texture_filter = 1
-position = Vector2(-88.375, -12.5)
-scale = Vector2(0.344565, 0.572222)
+position = Vector2(-65, -51)
+scale = Vector2(0.709778, 1.00556)
+texture = ExtResource("7_sag7n")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Prison"]
+texture_filter = 1
+position = Vector2(37, -51)
+scale = Vector2(0.709778, 1.00556)
+texture = ExtResource("7_sag7n")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Prison"]
+texture_filter = 1
+position = Vector2(127, -51)
+scale = Vector2(0.709778, 1.00556)
+texture = ExtResource("7_sag7n")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Prison"]
+texture_filter = 1
+position = Vector2(229, -51)
+scale = Vector2(0.709778, 1.00556)
 texture = ExtResource("7_sag7n")

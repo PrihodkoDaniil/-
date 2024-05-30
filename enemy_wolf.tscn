@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://dpb6o4syyvgfb"]
+
+[ext_resource type="Script" path="res://enemy/enemy_wolf.gd" id="1_5q1iw"]
+[ext_resource type="Texture2D" uid="uid://cy5fbtsin6rqj" path="res://sprites/enemy_sprites/Wolf/Wolf_left2.png" id="2_jm0xw"]
+[ext_resource type="Texture2D" uid="uid://c8cfeobjhms03" path="res://sprites/enemy_sprites/Wolf/Wolf_left1.png" id="3_6idw1"]
+[ext_resource type="PackedScene" uid="uid://drejjyi7a4m6d" path="res://ai/wander.tscn" id="3_vhmx2"]
+[ext_resource type="Texture2D" uid="uid://b6sw3wj787wrg" path="res://sprites/enemy_sprites/Wolf/Wolf_left3.png" id="4_a38we"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d7gce"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jm0xw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6idw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jm0xw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a38we")
+}],
+"loop": true,
+"name": &"Move",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t6iwt"]
+radius = 33.0
+height = 72.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_balng"]
+radius = 77.0065
+
+[node name="EnemyWolf" type="CharacterBody2D" node_paths=PackedStringArray("wander_direction")]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_5q1iw")
+speed = 200
+wander_direction = NodePath("Wander")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_d7gce")
+animation = &"Move"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CapsuleShape2D_t6iwt")
+
+[node name="ActionArea" type="Area2D" parent="."]
+position = Vector2(1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionArea"]
+visible = false
+shape = SubResource("CircleShape2D_balng")
+
+[node name="Wander" parent="." instance=ExtResource("3_vhmx2")]
+group_name = "FirstEnemy"
+
+[connection signal="body_entered" from="ActionArea" to="." method="_on_action_area_body_entered"]
+[connection signal="body_exited" from="ActionArea" to="." method="_on_action_area_body_exited"]

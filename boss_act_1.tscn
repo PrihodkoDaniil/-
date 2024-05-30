@@ -1,0 +1,52 @@
+[gd_scene load_steps=10 format=3 uid="uid://dsxe6qjwfgkef"]
+
+[ext_resource type="Script" path="res://BOSS.gd" id="1_h57f0"]
+[ext_resource type="Texture2D" uid="uid://byrixdwr6olxb" path="res://character spite/Bosses/Act 1 Bosss/босс первого акта анимация 1.png" id="2_7nd8f"]
+[ext_resource type="Texture2D" uid="uid://c1bis4a3t7wyy" path="res://character spite/Bosses/Act 1 Bosss/босс первого акта анимация 2.png" id="3_p6cul"]
+[ext_resource type="Texture2D" uid="uid://bcftyd2jitybx" path="res://character spite/Bosses/Act 1 Bosss/босс первого акта.png" id="4_vvxfj"]
+[ext_resource type="Script" path="res://other/Actionable.gd" id="5_gighu"]
+[ext_resource type="Resource" uid="uid://cr0imipbrk1pt" path="res://dialogues/boss1.dialogue" id="6_altll"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8wpbt"]
+radius = 49.366
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dsdaq"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("2_7nd8f")
+}, {
+"duration": 3.0,
+"texture": ExtResource("3_p6cul")
+}, {
+"duration": 3.0,
+"texture": ExtResource("4_vvxfj")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pbw5d"]
+radius = 65.0692
+
+[node name="Boss_act1" type="CharacterBody2D"]
+script = ExtResource("1_h57f0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_8wpbt")
+
+[node name="FirstBossSprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_dsdaq")
+animation = &"Idle"
+frame_progress = 0.345136
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+script = ExtResource("5_gighu")
+dialogue_resource = ExtResource("6_altll")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_pbw5d")
