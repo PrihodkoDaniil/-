@@ -7,9 +7,6 @@ script = ExtResource("1_s2oj6")
 defence_plus = 3
 name = "Кольчуга"
 description = "+ 3 защиты"
-<<<<<<< HEAD
 type = "Броня"
-=======
->>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1
 action = "set_armor"
 quantity = 1

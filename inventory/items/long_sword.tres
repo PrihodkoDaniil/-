@@ -7,9 +7,6 @@ script = ExtResource("1_w3ijf")
 atk_plus = 8
 name = "Длинный меч"
 description = "1к8 урона"
-<<<<<<< HEAD
 type = "Оружие"
-=======
->>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1
 action = "set_weapon"
 quantity = 1

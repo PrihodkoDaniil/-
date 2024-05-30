@@ -1,16 +1,27 @@
-class_name ItemsActions
 extends Node
 
-@export var inventory : Inventory
+@export var item : Resource
 
-func heal_item():
+
+func _process(delta):
+	pass
+
+func heal_cookie():
+	item = load("res://inventory/items/Cookie.tres")
+	State.current_health += item.health_restored
+	if State.current_health > State.max_health:
+		State.current_health = State.max_health
+		
+		
+func heal_candy():
+	item = load("res://inventory/items/small_candy.tres")
+	State.current_health += item.health_restored
+	if State.current_health > State.max_health:
+		State.current_health = State.max_health
+		
+func set_axe():
 	pass
 	
-func set_armor():
+func set_ring():
 	pass
-	
-func set_weapon():
-	pass
-	
-func set_accessory():
-	pass
+

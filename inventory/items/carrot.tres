@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="food_item" load_steps=2 format=3 uid="uid://cv5vo54hbvtt0"]
+
+[ext_resource type="Script" path="res://resources/food_item.gd" id="1_cfy02"]
+
+[resource]
+script = ExtResource("1_cfy02")
+health_restored = 40
+name = "Морковка"
+description = "От нее веет магией    +40 хп"
+type = "Еда"
+action = "heal_carrot"
+quantity = 1

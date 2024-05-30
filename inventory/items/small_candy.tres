@@ -9,4 +9,4 @@ name = "Маленькая конфета"
 description = "Такая розовая и сладкая"
 type = "Еда"
 action = "heal_candy"
-quantity = 2
+quantity = 1

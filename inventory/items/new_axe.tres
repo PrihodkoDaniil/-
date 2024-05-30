@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="weapon_item" load_steps=2 format=3 uid="uid://c6x5cd8ait8er"]
+
+[ext_resource type="Script" path="res://resources/weapon_item.gd" id="1_518lr"]
+
+[resource]
+script = ExtResource("1_518lr")
+atk_plus = 20
+name = "Эльфская секира"
+description = "1к20 урона"
+type = "Оружие"
+action = "set_new_axe"
+quantity = 1

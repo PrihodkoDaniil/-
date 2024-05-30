@@ -12,9 +12,6 @@ dexterity_plus = 0
 wisdom_plus = 0
 name = "Модные очки"
 description = "+ 2 харизмы"
-<<<<<<< HEAD
 type = "Аксессуар"
-=======
->>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1
 action = "set_accessory"
 quantity = 1
