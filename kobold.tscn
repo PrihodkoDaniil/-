@@ -1,0 +1,63 @@
+[gd_scene load_steps=11 format=3 uid="uid://c5jv5cjctc3mo"]
+
+[ext_resource type="Script" path="res://kobold.gd" id="1_bwv0k"]
+[ext_resource type="Texture2D" uid="uid://c2j4k2meevkt1" path="res://sprites/enemy_sprites/Kobold/движение 1.png" id="1_ibh5u"]
+[ext_resource type="Resource" uid="uid://h3rfgse3t25w" path="res://dialogues/kobold_bill.dialogue" id="2_3tch6"]
+[ext_resource type="Texture2D" uid="uid://wt8i1mnnqibq" path="res://sprites/enemy_sprites/Kobold/движение 2.png" id="2_yp1ve"]
+[ext_resource type="Texture2D" uid="uid://b2wjfxyebirg6" path="res://sprites/enemy_sprites/Kobold/движение 3.png" id="3_xpt6o"]
+[ext_resource type="Texture2D" uid="uid://bdbcdag5f0xan" path="res://sprites/enemy_sprites/Kobold/движение 4.png" id="4_jik0b"]
+[ext_resource type="PackedScene" uid="uid://drejjyi7a4m6d" path="res://ai/wander.tscn" id="6_8xcv2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ougfj"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("1_ibh5u")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_yp1ve")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_xpt6o")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_jik0b")
+}],
+"loop": true,
+"name": &"Move",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ldwmp"]
+radius = 116.004
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_abufg"]
+radius = 183.003
+
+[node name="Kobold" type="CharacterBody2D" node_paths=PackedStringArray("wander_direction")]
+script = ExtResource("1_bwv0k")
+wander_direction = NodePath("Wander")
+dialogue_resource = ExtResource("2_3tch6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ougfj")
+animation = &"Move"
+frame_progress = 0.754131
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(11, 10)
+shape = SubResource("CircleShape2D_ldwmp")
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_abufg")
+
+[node name="Wander" parent="." instance=ExtResource("6_8xcv2")]
+group_name = "FourEnemy"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

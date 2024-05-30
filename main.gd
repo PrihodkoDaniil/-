@@ -15,7 +15,6 @@ func _input(event):
 		get_tree().change_scene_to_file("res://MainMenu/main_menu.tscn")
 	
 
-
 func save():
 	var save_dic = {
 		"player_class" : State.player_class,
@@ -48,3 +47,4 @@ func load_game():
 		for i in node_data["position"]:
 			var pos = Vector2(node_data["position"][i][0], node_data["position"][i][1])
 			get_node(i).update_position(pos)
+
