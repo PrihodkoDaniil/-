@@ -126,17 +126,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-<<<<<<< HEAD
 offset_left = 8.0
 offset_top = -578.0
 offset_right = 649.0
 offset_bottom = -174.0
-=======
-offset_left = -147.0
-offset_top = -558.0
-offset_right = 494.0
-offset_bottom = -154.0
->>>>>>> 80a01d0f6cee8989e3be3832a889402d134329c1
 grow_horizontal = 2
 grow_vertical = 0
 
