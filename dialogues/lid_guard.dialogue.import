@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cohwals75ec6p"
+path="res://.godot/imported/lid_guard.dialogue-c1a2380b010be97d6beba048819f659a.tres"
+
+[deps]
+
+source_file="res://dialogues/lid_guard.dialogue"
+dest_files=["res://.godot/imported/lid_guard.dialogue-c1a2380b010be97d6beba048819f659a.tres"]
+
+[params]
+
+defaults=true

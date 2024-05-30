@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cyjfa0yx3shvk"
+path="res://.godot/imported/shopman.dialogue-13a4d75a217a0632e69b93a67d2b170c.tres"
+
+[deps]
+
+source_file="res://dialogues/shopman.dialogue"
+dest_files=["res://.godot/imported/shopman.dialogue-13a4d75a217a0632e69b93a67d2b170c.tres"]
+
+[params]
+
+defaults=true

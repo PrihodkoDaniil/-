@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dcvuadaiecpt8"
+path="res://.godot/imported/fisher.dialogue-c7980c4d8def92871222bdf0065a877a.tres"
+
+[deps]
+
+source_file="res://dialogues/fisher.dialogue"
+dest_files=["res://.godot/imported/fisher.dialogue-c7980c4d8def92871222bdf0065a877a.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://h3rfgse3t25w"
+path="res://.godot/imported/kobold_bill.dialogue-e4fe4ff74d960aef71d94fbe485131a4.tres"
+
+[deps]
+
+source_file="res://dialogues/kobold_bill.dialogue"
+dest_files=["res://.godot/imported/kobold_bill.dialogue-e4fe4ff74d960aef71d94fbe485131a4.tres"]
+
+[params]
+
+defaults=true

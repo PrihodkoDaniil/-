@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dhc0oki307qee"
+path="res://.godot/imported/richag.dialogue-cae293627f07a903208be2481f2c623a.tres"
+
+[deps]
+
+source_file="res://dialogues/richag.dialogue"
+dest_files=["res://.godot/imported/richag.dialogue-cae293627f07a903208be2481f2c623a.tres"]
+
+[params]
+
+defaults=true

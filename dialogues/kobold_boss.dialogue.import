@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c51x2nwk7uef7"
+path="res://.godot/imported/kobold_boss.dialogue-082fdf53b63c51ef982b4c81adbefba6.tres"
+
+[deps]
+
+source_file="res://dialogues/kobold_boss.dialogue"
+dest_files=["res://.godot/imported/kobold_boss.dialogue-082fdf53b63c51ef982b4c81adbefba6.tres"]
+
+[params]
+
+defaults=true

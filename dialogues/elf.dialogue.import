@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://wtui0ymmndvv"
+path="res://.godot/imported/elf.dialogue-e849ec1cc5a61a383f2e1e39cd824c52.tres"
+
+[deps]
+
+source_file="res://dialogues/elf.dialogue"
+dest_files=["res://.godot/imported/elf.dialogue-e849ec1cc5a61a383f2e1e39cd824c52.tres"]
+
+[params]
+
+defaults=true

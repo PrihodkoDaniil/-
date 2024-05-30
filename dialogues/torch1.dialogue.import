@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://qvgg2juls2lp"
+path="res://.godot/imported/torch1.dialogue-a0dfe39e2cf3e1c71418d0fc92ac850e.tres"
+
+[deps]
+
+source_file="res://dialogues/torch1.dialogue"
+dest_files=["res://.godot/imported/torch1.dialogue-a0dfe39e2cf3e1c71418d0fc92ac850e.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://da4dn6k3bkay5"
+path="res://.godot/imported/fourth_act_enter.dialogue-629281802ff63bb16531270a6c86b3e5.tres"
+
+[deps]
+
+source_file="res://dialogues/fourth_act_enter.dialogue"
+dest_files=["res://.godot/imported/fourth_act_enter.dialogue-629281802ff63bb16531270a6c86b3e5.tres"]
+
+[params]
+
+defaults=true

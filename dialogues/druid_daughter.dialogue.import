@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bm44uy35wk7m8"
+path="res://.godot/imported/druid_daughter.dialogue-b91beb2044d383252b83e4d25bcf8cf9.tres"
+
+[deps]
+
+source_file="res://dialogues/druid_daughter.dialogue"
+dest_files=["res://.godot/imported/druid_daughter.dialogue-b91beb2044d383252b83e4d25bcf8cf9.tres"]
+
+[params]
+
+defaults=true

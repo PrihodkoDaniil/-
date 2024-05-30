@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cgnppw1t3d54f"
+path="res://.godot/imported/dragonborn.dialogue-0743b004ebbd1077d11d1696dbdca1cc.tres"
+
+[deps]
+
+source_file="res://dialogues/dragonborn.dialogue"
+dest_files=["res://.godot/imported/dragonborn.dialogue-0743b004ebbd1077d11d1696dbdca1cc.tres"]
+
+[params]
+
+defaults=true

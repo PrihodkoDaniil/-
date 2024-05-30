@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://pu14x12ebtsg"
+path="res://.godot/imported/podval_exit.dialogue-32859a313c0fe7b2d6591cadadbba3f4.tres"
+
+[deps]
+
+source_file="res://dialogues/podval_exit.dialogue"
+dest_files=["res://.godot/imported/podval_exit.dialogue-32859a313c0fe7b2d6591cadadbba3f4.tres"]
+
+[params]
+
+defaults=true

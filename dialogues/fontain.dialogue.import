@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://wccfv84igt8g"
+path="res://.godot/imported/fontain.dialogue-7c11bc4712865ce86f60212b17e4bb4d.tres"
+
+[deps]
+
+source_file="res://dialogues/fontain.dialogue"
+dest_files=["res://.godot/imported/fontain.dialogue-7c11bc4712865ce86f60212b17e4bb4d.tres"]
+
+[params]
+
+defaults=true

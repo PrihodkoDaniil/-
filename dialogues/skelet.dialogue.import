@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://djcr3eal3td03"
+path="res://.godot/imported/skelet.dialogue-6cde2553f134aa3cffe41a6d4a457619.tres"
+
+[deps]
+
+source_file="res://dialogues/skelet.dialogue"
+dest_files=["res://.godot/imported/skelet.dialogue-6cde2553f134aa3cffe41a6d4a457619.tres"]
+
+[params]
+
+defaults=true
